@@ -15,11 +15,11 @@ code {
     monospace;
 }
 
-h1 {
+.h1 {
   color: white;
   text-align: center;
   font-size: 5rem;
-  margin-top: 1rem;
+
 }
 
 h1:hover {
