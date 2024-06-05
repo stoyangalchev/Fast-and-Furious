@@ -1,0 +1,39 @@
+.wheel {
+    -webkit-animation: spin 5s linear infinite;
+    animation: spin 5s linear infinite;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 200px;
+    
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px #f3f3f3, 0 0 5px #f3f3f3, 0 0 50px #f3f3f3, 0 0 20px #006eff;
+}
