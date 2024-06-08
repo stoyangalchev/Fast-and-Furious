@@ -1,7 +1,7 @@
 
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-// import { AuthProvider } from "./contexts/AuthContext";
+import { AuthProvider } from "./contexts/AuthContext";
 // import { AuthenticatedRouting } from "./components/authRoutes/AuthenticatedRouting";
 
 // import { Team } from "./components/teamInfo/Team";
@@ -19,16 +19,24 @@
 // import { NotFound } from "./components/pageNotFound/NotFound";
 // import { AddComment } from "./components/carsCatalogue/comments/AddComment";
 // import { Logout } from "./components/user/Logout";
-// import { FormValidatorProvider } from "./contexts/FormValidatorContext";
+import { FormValidatorProvider } from "./contexts/FormValidatorContext";
 // import { Mycars } from "./components/carsCatalogue/mycars/Mycars";
 // import { Likedcars } from "./components/carsCatalogue/mycars/Likedcars";
 // import { ScrollArrow } from "./components/globalComponents/ScrollArrow";
 
 function App() {
+
+
   return (
 
-    // <AuthProvider>
-    //   <FormValidatorProvider>
+    <AuthProvider>
+      <h1>Hello</h1>
+      <FormValidatorProvider>
+      </FormValidatorProvider>
+    </AuthProvider>
+
+
+
     //     <Navigation />
 
     //     <Routes>
@@ -66,9 +74,12 @@ function App() {
     //     <DownBar />
     //     <ScrollArrow />
     //     <Footer />
-    //   </FormValidatorProvider>
-    // </AuthProvider>
-<h1 className="h1">Hello World!</h1>
+
+
+
+
+
+
   );
 }
 
