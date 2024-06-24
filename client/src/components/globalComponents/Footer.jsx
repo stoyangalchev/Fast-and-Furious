@@ -4,7 +4,7 @@ import * as subscriptionService from "../../services/subscriptionService";
 import { useContext } from "react";
 import { FormValidatorContext } from "../../contexts/FormValidatorContext";
 import styles from "./Footer.module.css";
-import { scrollToTopHandler } from "../../utils/scrollToTopHandler";
+import { scrollToTop } from "./ScrollArrow";
 import { getAuthToken } from "../../services/getToken";
 
 export const Footer = () => {
@@ -42,7 +42,7 @@ export const Footer = () => {
                         <Link
                             to="/"
                             className={styles["navbar-brand"]}
-                            onClick={() => scrollToTopHandler()}
+                            onClick={scrollToTop}
                         >
                             <h1 className={styles.logoContainer}>
                                 <i className={`fas fa-car ${styles.icon}`}></i>Fast & Furious
@@ -58,7 +58,7 @@ export const Footer = () => {
                         <p className={styles.paragraph}>
                             <Link
                                 to="mailto:fastfurious@email.com"
-                                onClick={() => scrollToTopHandler()}
+                                onClick={scrollToTop}
                             >
                                 <i className="fa fa-envelope" style={{ color: "#008cff" }}></i>
                             </Link>{" "}
@@ -96,21 +96,21 @@ export const Footer = () => {
                                     <Link
                                         className={styles.quickLink}
                                         to="/"
-                                        onClick={() => scrollToTopHandler()}
+                                        onClick={scrollToTop}
                                     >
                                         <i className="fa fa-angle-right"></i> Home
                                     </Link>
                                     <Link
                                         className={styles.quickLink}
                                         to="/cars"
-                                        onClick={() => scrollToTopHandler()}
+                                        onClick={scrollToTop}
                                     >
                                         <i className="fa fa-angle-right"></i> Cars Catalogue
                                     </Link>
                                     <Link
                                         className={styles.quickLink}
                                         to="/team"
-                                        onClick={() => scrollToTopHandler()}
+                                        onClick={scrollToTop}
                                     >
                                         <i className="fa fa-angle-right"></i> The Crew
                                     </Link>
@@ -161,7 +161,7 @@ export const Footer = () => {
                             <Link
                                 to="/"
                                 style={{ color: "#fff" }}
-                                onClick={() => scrollToTopHandler()}
+                                onClick={scrollToTop}
                             >
                                 Fast & Furious. All Rights Reserved.
                             </Link>
