@@ -2,6 +2,8 @@
 import { Routes, Route } from "react-router-dom";
 
 import { AuthProvider } from "./contexts/AuthContext";
+import { FormValidatorProvider } from "./contexts/FormValidatorContext";
+
 // import { AuthenticatedRouting } from "./components/authRoutes/AuthenticatedRouting";
 
 // import { Team } from "./components/teamInfo/Team";
@@ -10,7 +12,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 // import { EditCar } from "./components/carsCatalogue/editCar/Editcar";
 // import { CarDetails } from "./components/carsCatalogue/carsDetails/CarDetails";
 // import { AboutUs } from "./components/homePage/AboutUs";
-// import { Footer } from "./components/globalComponents/Footer";
+ import { Footer } from "./components/globalComponents/Footer";
 // import { ImageInfo } from "./components/homePage/ImageInfo";
 // import { Navigation } from "./components/globalComponents/Navigation";
 // import { DownBar } from "./components/homePage/DownBar";
@@ -19,7 +21,6 @@ import { AuthProvider } from "./contexts/AuthContext";
 // import { NotFound } from "./components/pageNotFound/NotFound";
 // import { AddComment } from "./components/carsCatalogue/comments/AddComment";
 // import { Logout } from "./components/user/Logout";
-import { FormValidatorProvider } from "./contexts/FormValidatorContext";
 // import { Mycars } from "./components/carsCatalogue/mycars/Mycars";
 // import { Likedcars } from "./components/carsCatalogue/mycars/Likedcars";
 // import { ScrollArrow } from "./components/globalComponents/ScrollArrow";
@@ -30,11 +31,13 @@ function App() {
   return (
 
     <AuthProvider>
-      <h1>Hello</h1>
       <FormValidatorProvider>
+        <h1>Hello</h1>
+
+        <Footer />
       </FormValidatorProvider>
     </AuthProvider>
-
+      
 
 
     //     <Navigation />
@@ -73,7 +76,7 @@ function App() {
 
     //     <DownBar />
     //     <ScrollArrow />
-    //     <Footer />
+    
 
 
 
