@@ -176,12 +176,8 @@
   border-top: 1px solid #008cff;
   margin-right: auto;
   margin-left: auto;
-  background-size: 3px 3px;
-  background-image: -webkit-repeating-radial-gradient(center center,
-      rgba(256, 256, 256, 0.2),
-      rgba(256, 256, 256, 0.2) 1px,
-      transparent 1px,
-      transparent 100%);
+
+  
 }
 
 .footerEndWrapper {
