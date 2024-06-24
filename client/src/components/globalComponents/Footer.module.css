@@ -1,0 +1,210 @@
+.container {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.5);
+  padding-right: 3rem;
+  padding-left: 3rem;
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-size: 3px 3px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.footerRow {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.col1 {
+  padding-right: 3rem;
+  flex: 0 0 auto;
+  width: 50%;
+  border-right: 1px solid #008cff;
+
+}
+
+.col2 {
+  padding-left: 3rem;
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #008cff;
+  text-decoration: none;
+}
+
+.logoContainer {
+  display: flex;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Roboto", sans-serif;
+}
+
+.icon {
+  color: #008cff;
+  margin-right: 0.5rem;
+}
+
+.paragraph {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #008cff
+}
+
+.socialMediaContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.socialMediaBtn {
+  border-radius: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+  color: #000;
+  background-color: #008cff;
+  border-color: #008cff;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.col2Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.quicklinksContainer {
+  flex: 0 0 auto;
+  width: 50%;
+  margin-bottom: 3.5rem;
+}
+
+.quicklinksHeading {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+
+.quicklinksWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.quickLink {
+  color: #008cff;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.newsletterContainer {
+  flex: 0 0 auto;
+  width: 40%;
+}
+
+.errors {
+  color: #008cff;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input {
+  border-color: #f4f6f8;
+  display: block;
+  height: 2.5rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: #777;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: 0;
+}
+
+.signUpBtn {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.footerEndContainer {
+  background-color: #040f28;
+  color: #fff;
+  padding-right: 0;
+  padding-left: 0;
+  border-color: #008cff;
+  border-top: 1px solid #008cff;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: 3px 3px;
+  background-image: -webkit-repeating-radial-gradient(center center,
+      rgba(256, 256, 256, 0.2),
+      rgba(256, 256, 256, 0.2) 1px,
+      transparent 1px,
+      transparent 100%);
+}
+
+.footerEndWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.footerEndDisclaimer {
+  text-align: left;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+}
+
+.footerEndShape {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #008cff;
+  border-left: 100px solid transparent;
+}
+
+@media (max-width: 890px) {
+  .logoContainer {
+    font-size: 1.6em;
+  }
+}
+
