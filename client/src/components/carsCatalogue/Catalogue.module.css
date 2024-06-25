@@ -1,0 +1,181 @@
+.containerHeader {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(rgba(4, 15, 40, 0.7), rgba(4, 15, 40, 0.7)),
+    url(../../../public/img/need4speed.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.sectionTitle {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 50px;
+  font-family: "Roboto", sans-serif;
+  font-size: calc(2rem + 4vw);
+  text-shadow: 2px 2px 4px #000000;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: glow 2s ease-in-out infinite;
+}
+
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #0bbbd7, 0 0 10px #0bbbd7, 0 0 15px #0bbbd7, 0 0 20px #0bbbd7;
+  }
+
+  50% {
+    text-shadow: 0 0 10px #0bbbd7, 0 0 20px #0bbbd7, 0 0 30px #0bbbd7, 0 0 40px #0bbbd7;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #0bbbd7, 0 0 10px #0bbbd7, 0 0 15px #0bbbd7, 0 0 20px #0bbbd7;
+  }
+}
+
+
+
+@media (min-width: 1200px) {
+  .sectionTitle {
+    font-size: 8rem;
+  }
+}
+
+.newcarBtn {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0.5rem;
+  color: #c5c5c5;
+  background-color: #008cff;
+  border-color: #008cff;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid ;
+  border-color: #242424;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .newcarBtn {
+    padding: 1rem 3rem 1rem 3rem;
+  }
+}
+
+.containerContent {
+  padding: 1rem 3rem 1rem 3rem;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.browsecarsHeader {
+  max-width: 600px;
+  text-align: center;
+  margin: 1rem auto 3rem auto;
+}
+
+.browsecarsHeading {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .browsecarsHeading {
+    font-size: 3rem;
+  }
+}
+
+.carsSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  color: #008cff;
+}
+
+.select {
+
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+
+  width: 30rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: white;
+  border-radius: 1.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+
+  &::-ms-expand {
+    display: none;
+  }
+
+
+  &:focus {
+    outline:auto
+  }
+
+
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+:root {
+  --arrow-bg: rgba(255, 255, 255, 0.3);
+  --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+  --option-bg: white;
+  --select-bg: rgba(255, 255, 255, 0.2);
+}
+
+.findcarsHeading {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+.nocars {
+  color: #008cff;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
