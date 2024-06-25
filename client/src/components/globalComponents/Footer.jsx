@@ -1,11 +1,13 @@
+
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+
 import * as subscriptionService from "../../services/subscriptionService";
-import { useContext } from "react";
 import { FormValidatorContext } from "../../contexts/FormValidatorContext";
-import styles from "./Footer.module.css";
+
 import { scrollToTop } from "./ScrollArrow";
 import { getAuthToken } from "../../services/getToken";
+import styles from "./Footer.module.css";
 
 export const Footer = () => {
     const [email, setEmail] = useState("");
