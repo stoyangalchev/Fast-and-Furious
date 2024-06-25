@@ -4,9 +4,9 @@ import { useState, useContext } from "react";
 
 import * as subscriptionService from "../../services/subscriptionService";
 import { FormValidatorContext } from "../../contexts/FormValidatorContext";
+import { getAuthToken } from "../../services/getToken";
 
 import { scrollToTop } from "./ScrollArrow";
-import { getAuthToken } from "../../services/getToken";
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
@@ -24,6 +24,7 @@ export const Footer = () => {
         sethasAuthToken(true)
     }
 
+    //On Submit call createSubscription 
     const createSubscription = (e) => {
         e.preventDefault();
         const data = {
