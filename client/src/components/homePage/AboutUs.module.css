@@ -1,0 +1,116 @@
+.container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.itemsWrapper {
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0.5rem;
+}
+
+@media (min-width: 992px) {
+    .lg {
+        flex: 0 0 auto;
+        width: 58.33333%;
+    }
+}
+
+.header {
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    color: #d2d2d2;
+}
+
+.highlight {
+    color: #008cff;
+}
+
+.header2 {
+    text-align: center;
+    color: #d2d2d2;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.paragraph {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.list {
+    justify-content: center;
+    text-align: left;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+    align-items: center;
+}
+
+.col {
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+
+.item {
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.icons {
+    color: #008cff;
+    margin-right: 1rem;
+}
+
+.item1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.imageWrapper {
+    min-height: 400px;
+    padding-bottom: 3rem;
+    width: 40%;
+}
+
+.imgBg {
+    margin-left: 3rem;
+    height: 100%;
+    position: relative;
+    background-size: 3px 3px;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 1px, transparent 100%);
+}
+
+.img {
+    object-fit: contain;
+    margin-left: -3rem;
+    margin-top: 3rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    vertical-align: middle;
+
+}
