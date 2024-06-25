@@ -1,0 +1,91 @@
+.container {
+    width: 100vw;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    color: #000;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.overlayInfo {
+
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 0.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    top: 0;
+
+    z-index: 1;
+}
+
+.textContainer {
+    max-width: 900px;
+    padding: 1rem;
+}
+
+.icon {
+    font-size: 10em;
+    margin-bottom: 1.5rem;
+    color: #008cff;
+    display: block;
+}
+
+.heading {
+    color: azure;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 600px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    color: #FFFFFF;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .5s;
+    margin-top: 70%;
+    background-color: #008cff;
+    border-color: #008cff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1.25rem;
+    border-radius: 0.65rem;
+}
+
+@media (max-width: 600px) {
+    .btn {
+        margin-top: 10%;
+        /* Adjust this value as needed */
+    }
+}
