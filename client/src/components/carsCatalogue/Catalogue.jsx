@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { Link } from "react-router-dom";
+
+import { AuthContext } from "../../contexts/AuthContext";
 import * as carsService from "../../services/carsService";
 import { Car } from "./newCar/Car";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../../contexts/AuthContext";
-import { scrollToTopHandler } from "../../utils/scrollToTopHandler";
+
+import { scrollToTop } from "../globalComponents/ScrollArrow";
 import styles from "./Catalogue.module.css";
 
 export const Catalogue = () => {
@@ -89,7 +90,7 @@ export const Catalogue = () => {
                                         <Link
                                             to="/login"
                                             style={{ color: "#008cff" }}
-                                            onClick={scrollToTopHandler}
+                                            onClick={scrollToTop}
                                         >
                                             login
                                         </Link>{" "}
@@ -97,7 +98,7 @@ export const Catalogue = () => {
                                         <Link
                                             to="/register"
                                             style={{ color: "#008cff" }}
-                                            onClick={scrollToTopHandler}
+                                            onClick={scrollToTop}
                                         >
                                             register
                                         </Link>{" "}
