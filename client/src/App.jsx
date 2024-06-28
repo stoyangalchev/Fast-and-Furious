@@ -6,7 +6,7 @@ import { FormValidatorProvider } from "./contexts/FormValidatorContext";
 
 // import { AuthenticatedRouting } from "./components/authRoutes/AuthenticatedRouting";
 
-// import { Team } from "./components/teamInfo/Team";
+import { Team } from "./components/teamInfo/Team";
 // import { AddNewCar } from "./components/carsCatalogue/newCar/AddNewCar";
 import { Catalogue } from "./components/carsCatalogue/Catalogue";
 // import { EditCar } from "./components/carsCatalogue/editCar/Editcar";
@@ -42,10 +42,12 @@ function App() {
               <AboutUs />
               <Catalogue />
               <DownBar />
+              <Team />
             </>
           }
           />
           <Route path="/cars/" element={<Catalogue />} />
+          <Route path="/team" element={<Team />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
