@@ -8,10 +8,10 @@ import { FormValidatorProvider } from "./contexts/FormValidatorContext";
 
 // import { Team } from "./components/teamInfo/Team";
 // import { AddNewCar } from "./components/carsCatalogue/newCar/AddNewCar";
-// import { Catalogue } from "./components/carsCatalogue/Catalogue";
+import { Catalogue } from "./components/carsCatalogue/Catalogue";
 // import { EditCar } from "./components/carsCatalogue/editCar/Editcar";
 // import { CarDetails } from "./components/carsCatalogue/carsDetails/CarDetails";
- import { AboutUs } from "./components/homePage/AboutUs";
+import { AboutUs } from "./components/homePage/AboutUs";
 import { Footer } from "./components/globalComponents/Footer";
 import { ImageInfo } from "./components/homePage/ImageInfo";
 import { Navigation } from "./components/globalComponents/Navigation";
@@ -40,15 +40,17 @@ function App() {
             <>
               <ImageInfo />
               <AboutUs />
+              <Catalogue />
+              <DownBar />
             </>
           }
           />
-
+          <Route path="/cars/" element={<Catalogue />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
         <ScrollArrow />
-        <DownBar />
+
         <Footer />
 
       </FormValidatorProvider>
@@ -66,7 +68,7 @@ function App() {
     //         element={
     //           <>
     //             <ImageInfo />
-    //          
+    //             <AboutUs />
     //             <Catalogue />
     //             <Team />
     //           </>
