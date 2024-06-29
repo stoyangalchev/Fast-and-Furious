@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 import * as subscriptionService from "../../services/subscriptionService";
 import { FormValidatorContext } from "../../contexts/FormValidatorContext";
@@ -19,12 +19,13 @@ export const Footer = () => {
         setEmail(e.target.value);
     };
 
-    // Check if work when get real token
-    if (getAuthToken() !== null) {
-        sethasAuthToken(true)
-    }
 
-    //On Submit call createSubscription 
+    useEffect(() => {
+        if (getAuthToken() !== null) {
+            sethasAuthToken(true)
+        }
+    }, [hasAuthToken])
+
     const createSubscription = (e) => {
         e.preventDefault();
         const data = {
