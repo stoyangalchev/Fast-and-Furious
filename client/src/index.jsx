@@ -12,6 +12,7 @@ const Main = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
+      
     }, 1000);
 
     return () => clearTimeout(timer);
@@ -25,6 +26,7 @@ const Main = () => {
     </React.StrictMode>
   );
 }
+
 
 const rootElement = document.getElementById("root");
 createRoot(rootElement).render(<Main />);
