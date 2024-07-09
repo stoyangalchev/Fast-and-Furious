@@ -8,19 +8,27 @@ export const AuthProvider = ({
 }) => {
     const [state, setState] = useLocalStorage('auth', {});
 
-    function setStateFunc (data) {
-        setState(data)
-      }
+    function setStateFunc(data) {
+
+        if (data.token) {
+            setState(data)
+        } else {
+            setState({})
+            localStorage.removeItem('auth')
+        }
+    }
+
+
     const contextValues = {
         setStateFunc,
         isAuthenticated: !!state.token,
         userId: state._id
-      }
+    }
     return (
         <>
-        <AuthContext.Provider value={contextValues}>
-            {children}
-        </AuthContext.Provider>
+            <AuthContext.Provider value={contextValues}>
+                {children}
+            </AuthContext.Provider>
         </>
     )
 }
