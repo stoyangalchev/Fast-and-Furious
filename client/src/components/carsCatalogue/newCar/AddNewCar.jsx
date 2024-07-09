@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as carsService from "../../../services/carsService";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
@@ -9,7 +9,10 @@ import { scrollToTop } from "../../globalComponents/ScrollArrow";
 
 export const AddNewCar = () => {
 
-  scrollToTop();//useEfect Here to  use it when component is rendered
+  useEffect(() => {
+    scrollToTop()
+  }, [])
+
 
   const { userId } = useContext(AuthContext);
   const { carValidator, errors } = useContext(FormValidatorContext);
