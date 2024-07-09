@@ -57,7 +57,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 0.5rem;
-  color: #c5c5c5;
+  color: #ffffff;
   background-color: #008cff;
   border-color: #008cff;
   display: inline-block;
@@ -117,6 +117,7 @@
 .carsSection {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .highlight {
