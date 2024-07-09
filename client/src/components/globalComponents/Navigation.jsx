@@ -27,17 +27,26 @@ export const Navigation = () => {
             <Link to="/" onClick={scrollToTop}>
               <button className={styles.shadow__btn}>Home</button>
             </Link>
+
             <Link to="/cars" onClick={scrollToTop}>
               <button className={styles.shadow__btn}>Cars Catalogue</button>
             </Link>
-            {isAuthenticated && (
-              <Link to="/my-cars" onClick={scrollToTop}>
-                <button className={styles.shadow__btn}>My car</button>
-              </Link>
-            )}
+
             <Link to="/team" onClick={scrollToTop}>
               <button className={styles.shadow__btn}>The Crew</button>
             </Link>
+
+            {isAuthenticated && (
+              <Link to="/my-cars" onClick={scrollToTop}>
+                <button className={styles.shadow__btn1}>My car</button>
+              </Link>
+            )}
+            {isAuthenticated && (
+              <Link to="/new-car" onClick={scrollToTop}>
+                <button className={styles.shadow__btn1}>Add Car</button>
+              </Link>
+            )}
+
             {isAuthenticated && (
               <Link to="/logout" onClick={scrollToTop}>
                 <button className={styles.shadow__btn_special}>Logout</button>
