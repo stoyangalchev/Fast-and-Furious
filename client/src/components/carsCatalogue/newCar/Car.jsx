@@ -8,6 +8,7 @@ import styles from "./Car.module.css";
 
 export const Car = ({ car }) => {
   const { isAuthenticated } = useContext(AuthContext);
+
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
