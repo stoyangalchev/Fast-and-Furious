@@ -1,6 +1,7 @@
 import styles from "./Team.module.css";
 
 export const Team = () => {
+
     return (
         <div className={styles.container}>
             <div>
