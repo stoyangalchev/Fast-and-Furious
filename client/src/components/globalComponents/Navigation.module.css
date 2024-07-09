@@ -79,6 +79,34 @@
   box-shadow: 0 0 25px rgb(0, 140, 255);
 }
 
+.shadow__btn1 {
+  margin-left: 5px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0s;
+  transition-property: box-shadow;
+  cursor: pointer;
+}
+
+.shadow__btn1 {
+  background: linear-gradient(to right, rgb(3, 176, 250), rgb(5, 146, 206));
+  box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.shadow__btn1:hover {
+  color: #001c44;
+  box-shadow: 0 0 5px rgb(0, 140, 255),
+    0 0 25px rgb(0, 140, 255),
+    0 0 50px rgb(0, 140, 255),
+    0 0 100px rgb(0, 140, 255);
+}
+
 .shadow__btn:hover {
   color: #001c44;
   box-shadow: 0 0 5px rgb(0, 140, 255),
@@ -227,7 +255,7 @@ strong {
   background: transparent;
   width: 200rem;
   height: 200rem;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #stars::after {
