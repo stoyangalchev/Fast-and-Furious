@@ -1,3 +1,5 @@
+
+
 .containerHeader {
   width: 100%;
   padding-right: 0.75rem;
@@ -10,7 +12,7 @@
   align-items: center;
 
   background: linear-gradient(rgba(4, 15, 40, 0.7), rgba(4, 15, 40, 0.7)),
-    url(../../../public/img/need4speed.jpg) center center no-repeat;
+    url(/img/need4speed.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -57,24 +59,34 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 0.5rem;
-  color: #ffffff;
+  color: #090b6c;
+  font-weight: 1000;
   background-color: #008cff;
   border-color: #008cff;
   display: inline-block;
-  font-weight: 400;
   line-height: 1.5;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  border: 2px solid ;
+  border: 2px solid;
   border-color: #242424;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 50%;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   position: relative;
   text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 80%;
+  writing-mode: vertical-rl;
+  transform: rotate(300deg);
+}
+
+.newcarBtn:hover {
+  color: #008cff;
+  background-color: #feffff;
+  border-color: #242424;
   text-decoration: none;
 }
 
@@ -147,7 +159,7 @@
 
 
   &:focus {
-    outline:auto
+    outline: auto
   }
 
 
@@ -156,6 +168,7 @@
     background-color: var(--option-bg);
   }
 }
+
 :root {
   --arrow-bg: rgba(255, 255, 255, 0.3);
   --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);

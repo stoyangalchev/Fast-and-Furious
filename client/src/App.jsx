@@ -21,12 +21,12 @@ import { Register } from "./components/user/Register";
 import { NotFound } from "./components/pageNotFound/NotFound";
 // import { AddComment } from "./components/carsCatalogue/comments/AddComment";
 import { Logout } from "./components/user/Logout";
-// import { Mycars } from "./components/carsCatalogue/mycars/Mycars";
+ import { Mycars } from "./components/carsCatalogue/mycars/Mycars";
 // import { Likedcars } from "./components/carsCatalogue/mycars/Likedcars";
 import { ScrollArrow } from "./components/globalComponents/ScrollArrow";
 
 
-import  ErrorBoundary  from "./components/errorBoundary/ErrorBoudary";
+import ErrorBoundary from "./components/errorBoundary/ErrorBoudary";
 
 function App() {
 
@@ -57,8 +57,9 @@ function App() {
             <Route path="*" element={<NotFound />} />
 
             <Route element={<AuthenticatedRouting />}>
-
               <Route path="/new-car" element={<AddNewCar />} />
+              <Route path="/my-cars" element={<Mycars />} />
+
             </Route>
 
           </Routes>

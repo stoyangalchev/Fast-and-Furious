@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 
 import styles from "./Car.module.css";
-
+ 
 
 export const Car = ({ car }) => {
   const { isAuthenticated } = useContext(AuthContext);

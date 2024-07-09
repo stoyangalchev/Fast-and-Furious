@@ -7,11 +7,10 @@
     padding-bottom: 1rem;
     background-color: #ffffff;
     height: 22rem;
-    /* Add 3D effect and shadows */
     box-shadow: 0 10px 20px #0091ff, 0 6px 6px #0091ff;
     border: 1px solid #0091ff;
     border-radius: 10px;
-    transition: all 0.3s ease;
+   
 }
 
 .container:hover {
