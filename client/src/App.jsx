@@ -25,49 +25,52 @@ import { Logout } from "./components/user/Logout";
 // import { Likedcars } from "./components/carsCatalogue/mycars/Likedcars";
 import { ScrollArrow } from "./components/globalComponents/ScrollArrow";
 
+
+import  ErrorBoundary  from "./components/errorBoundary/ErrorBoudary";
+
 function App() {
 
 
   return (
+    <ErrorBoundary>
+      <AuthProvider>
+        <FormValidatorProvider>
 
-    <AuthProvider>
-      <FormValidatorProvider>
+          <Navigation />
 
-        <Navigation />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <ImageInfo />
+                <AboutUs />
+                <Catalogue />
+                <DownBar />
+                <Team />
+              </>
+            }
+            />
+            <Route path="/cars/" element={<Catalogue />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="*" element={<NotFound />} />
 
-        <Routes>
-          <Route path="/" element={
-            <>
-              <ImageInfo />
-              <AboutUs />
-              <Catalogue />
-              <DownBar />
-              <Team />
-            </>
-          }
-          />
-          <Route path="/cars/" element={<Catalogue />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="*" element={<NotFound />} />
+            <Route element={<AuthenticatedRouting />}>
 
-          <Route element={<AuthenticatedRouting />}>
+              <Route path="/new-car" element={<AddNewCar />} />
+            </Route>
 
-            <Route path="/new-car" element={<AddNewCar />} />
-          </Route>
+          </Routes>
 
-        </Routes>
+          <ScrollArrow />
 
-        <ScrollArrow />
+          <Footer />
 
-        <Footer />
+        </FormValidatorProvider>
+      </AuthProvider>
 
-      </FormValidatorProvider>
-    </AuthProvider>
-
-
+    </ErrorBoundary>
 
 
 
