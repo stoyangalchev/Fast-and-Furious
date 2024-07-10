@@ -3,13 +3,15 @@
     width: 50%;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    display: block;
+    display: inline-block;
     padding-bottom: 1rem;
     background-color: #ffffff;
     height: 22rem;
     box-shadow: 0 10px 20px #0091ff, 0 6px 6px #0091ff;
     border: 1px solid #0091ff;
     border-radius: 10px;
+    cursor: pointer;
+
    
 }
 
@@ -28,6 +30,8 @@
 
 .wrapper {
     height: 70%;
+    
+ 
 }
 
 .img {
@@ -42,6 +46,7 @@
 
 .detailsWrapper {
     padding: 1.5rem;
+    
 }
 
 .row1 {
