@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Car } from "../newCar/Car";
+import { NewCarButton} from "../../../utils/NewCarButton/NewCarButton"
 import { useContext } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { Link } from "react-router-dom";
+
 import * as carsService from "../../../services/carsService";
 import styles from "../Catalogue.module.css";
 
@@ -25,8 +27,9 @@ export const Mycars = () => {
     <>
       <section className={styles.containerHeader}>
         <h1 className={styles.sectionTitle}>My cars</h1>
-        <Link to="/liked-cars" className={styles.newcarBtn}>
-          Liked cars
+        <Link to="/liked-cars" >
+
+          <NewCarButton tittle={"Liked cars"} />
         </Link>
       </section>
       <section className={styles.containerContent}>
