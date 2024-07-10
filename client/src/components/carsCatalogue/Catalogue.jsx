@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as carsService from "../../services/carsService";
 import { Car } from "./newCar/Car";
-
+import { NewCarButton } from "../../utils/NewCarButton/NewCarButton";
 import { scrollToTop } from "../globalComponents/ScrollArrow";
+
 import styles from "./Catalogue.module.css";
 
 export const Catalogue = () => {
@@ -41,8 +42,8 @@ export const Catalogue = () => {
             <section className={styles.containerHeader}>
                 <h1 className={styles.sectionTitle}> Catalogue</h1>
                 {isAuthenticated && (
-                    <Link to="/new-car" className={styles.newcarBtn}>
-                        Add new car
+                    <Link to="/new-car" >
+                        <NewCarButton tittle={"Add New Car"}/>
                     </Link>
                 )}
             </section>

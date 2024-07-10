@@ -55,40 +55,6 @@
   }
 }
 
-.newcarBtn {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-top: 0.5rem;
-  color: #090b6c;
-  font-weight: 1000;
-  background-color: #008cff;
-  border-color: #008cff;
-  display: inline-block;
-  line-height: 1.5;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  border: 2px solid;
-  border-color: #242424;
-  font-size: 1rem;
-  border-radius: 50%;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-left: 80%;
-  writing-mode: vertical-rl;
-  transform: rotate(300deg);
-}
-
-.newcarBtn:hover {
-  color: #008cff;
-  background-color: #feffff;
-  border-color: #242424;
-  text-decoration: none;
-}
 
 @media (min-width: 768px) {
   .newcarBtn {
