@@ -7,16 +7,19 @@
   padding-top: 90px;
   padding-bottom: 90px;
 }
+
 .contentWrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
+
 .col1 {
   margin-bottom: 0;
-    flex: 0 0 auto;
-    width: 50%;
+  flex: 0 0 auto;
+  width: 50%;
 }
+
 .heading {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -27,6 +30,7 @@
   font-family: "Roboto", sans-serif;
   color: #040f28;
 }
+
 .highlight {
   color: #008cff;
 }
@@ -42,10 +46,12 @@
   text-align: center;
   padding: 3rem;
 }
+
 .form {
   display: flex;
   flex-wrap: wrap;
 }
+
 .newcarLbl {
   padding: 10px;
   color: #008cff;
@@ -53,6 +59,31 @@
   font-weight: 700;
   display: inline-block;
 }
+
+.inputAuthor {
+
+  width: 100%;
+  color: #080000;
+  background-color: #30d403;
+  border-color: #008cff;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: px;
+  border-radius: 50px;
+  height: 2rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .input {
   border: 0;
   display: block;
@@ -70,18 +101,21 @@
   margin: 0;
   font-family: inherit;
 }
+
 .inputComment {
   height: 4rem;
   margin-bottom: 2rem;
 }
+
 .input:focus {
-    outline: none;
-    border: 1px solid #008cff;
+  outline: none;
+  border: 1px solid #008cff;
 }
+
 .errors {
-  color: #008cff;
-    margin-top: 0;
-    margin-bottom: 1rem
+  color: #ff0000;
+  margin-top: 0;
+  margin-bottom: 1rem
 }
 
 .maxWidthWrapper {
@@ -89,6 +123,7 @@
   width: 100%;
 
 }
+
 .btn {
   cursor: pointer;
   padding-top: 1rem;
@@ -110,22 +145,29 @@
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   position: relative;
   text-transform: uppercase;
-  margin: 0;
+
   border-radius: 0;
   height: 3rem;
   font-size: 20px;
   font-weight: 700;
 
 }
+
 .btn:hover {
   color: #ffffff;
 }
-@media (min-width: 992px) {
+
+@media (min-width: 600px) {
   .col1 {
     width: 33.33333%;
   }
+
+
   .col2 {
     flex: 0 0 auto;
     width: 66.66667%;
   }
+
+
+
 }

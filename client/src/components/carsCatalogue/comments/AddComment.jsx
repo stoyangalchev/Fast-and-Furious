@@ -33,6 +33,14 @@ export const AddComment = () => {
         })
     }
 
+    const handleCommentChange = (e) => {
+        const value = e.target.value;
+        setComment(value);
+        if (value) {
+            setServerError('');
+        }
+    };
+
     const onCancel = () => {
         redirect(`/cars/${carId}`)
     }
@@ -49,12 +57,14 @@ export const AddComment = () => {
                     <form onSubmit={onCommentSubmit}>
                         <div className={styles.form}>
                             <div className={styles.maxWidthWrapper}>
-                                <label className={styles.newcarLbl} htmlFor="author">AUTHOR</label>
-                                <input disabled type="text" id="author" className={styles.inputAuthor} value={author}/>
+                                <label className={styles.newcarLbl} htmlFor="author">AUTHOR:
+                                        <input disabled type="text" id="author" className={styles.inputAuthor} value={author} />
+                                </label>
+           
                             </div>
                             <div className={styles.maxWidthWrapper}>
-                            <label className={styles.newcarLbl} htmlFor="description">COMMENT</label>
-                                <textarea className={`${styles.input} ${styles.inputComment}`} id="description" rows="5" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
+                            <label className={styles.newcarLbl} htmlFor="description">COMMENT:</label>
+                                    <textarea className={`${styles.input} ${styles.inputComment}`} id="description" rows="5" value={comment} onChange={handleCommentChange} ></textarea>
                             </div>
                             <div className={styles.maxWidthWrapper}>
                             <p className={styles.errors}>{serverError}</p>
