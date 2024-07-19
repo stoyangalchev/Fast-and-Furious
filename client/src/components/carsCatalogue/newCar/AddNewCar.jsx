@@ -13,7 +13,6 @@ export const AddNewCar = () => {
     scrollToTop()
   }, [])
 
-
   const { userId } = useContext(AuthContext);
   const { carValidator, errors } = useContext(FormValidatorContext);
   const redirect = useNavigate();
