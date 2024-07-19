@@ -40,6 +40,11 @@ export const AddComment = () => {
             setServerError('');
         }
     };
+    const handleCommentBlur = () => {
+        if (!comment) {
+            setServerError('Comment cannot be empty');
+        }
+    };
 
     const onCancel = () => {
         redirect(`/cars/${carId}`)
@@ -64,7 +69,7 @@ export const AddComment = () => {
                             </div>
                             <div className={styles.maxWidthWrapper}>
                             <label className={styles.newcarLbl} htmlFor="description">COMMENT:</label>
-                                    <textarea className={`${styles.input} ${styles.inputComment}`} id="description" rows="5" value={comment} onChange={handleCommentChange} ></textarea>
+                                    <textarea className={`${styles.input} ${styles.inputComment}`} id="description" rows="5" value={comment} onChange={handleCommentChange} onBlur={handleCommentBlur} ></textarea>
                             </div>
                             <div className={styles.maxWidthWrapper}>
                             <p className={styles.errors}>{serverError}</p>
