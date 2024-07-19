@@ -73,11 +73,11 @@ export const CarDetails = () => {
             <h3 className={styles.highlight}>Category
               <p className={styles.paragraph}>{car.category}</p>
             </h3>
-            
+
             <h3 className={styles.highlight}>Mode
               <p className={styles.paragraph}>{car.mode}</p>
             </h3>
-            
+
             <h3 className={styles.highlight}>Description
               <p className={styles.paragraph}>{car.description}</p>
             </h3>
@@ -88,11 +88,11 @@ export const CarDetails = () => {
                 {car.date}
               </p>
             </h3>
-          
+
             <h3 className={styles.highlight}>Liked by
               <p className={styles.paragraph}>{car.likes} users</p>
             </h3>
-        
+
           </section>
           <h3 className={styles.highlight}>Comments
             {comments.map((x) => (
@@ -109,23 +109,23 @@ export const CarDetails = () => {
               <p className={styles.paragraph}>No comments yet.</p>
             )}
           </h3>
-         
+
           <div className={styles.btnContainer}>
             {!isOwner && !hasLiked && (
-              <button className={styles.btn} onClick={oncarLike}>
-                <i className={`far fa-heart ${styles.highlight}`}></i> Like car{" "}
+              <button className={`${styles.btn} ${styles.btnHover1}`} onClick={oncarLike}>
+                <i className={`far fa-heart ${styles.highlight} ${styles.highlight1}`}></i> Like car{" "}
               </button>
             )}
-            <Link className={styles.btn} to={`/comments/${carId}`}>
+            <Link className={`${styles.btn} ${styles.btnHover1}`} to={`/comments/${carId}`}>
               <i className={`far fa-comments ${styles.highlight}`}></i> Comment{" "}
             </Link>
             {isOwner && (
               <>
-                <Link className={styles.btn} to={`/cars/${carId}/edit`}>
+                <Link className={`${styles.btn} ${styles.btnHover1}`} to={`/cars/${carId}/edit`}>
                   <i className={`far fa-edit ${styles.highlight}`}></i> Edit{" "}
                 </Link>
                 <button
-                  className={styles.btn}
+                  className={`${styles.btn} ${styles.btnHover}`}
                   onClick={() => setShowDeleteMessage(true)}
                 >
                   <i className={`far fa-trash-alt ${styles.highlight}`}></i>{" "}

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import * as commentsService from '../../../services/commentsService'
 import { useNavigate, useParams } from 'react-router-dom';
+import { scrollToTop } from '../../globalComponents/ScrollArrow';
+
 import styles from './AddComment.module.css'
 
 export const AddComment = () => {
@@ -11,6 +13,7 @@ export const AddComment = () => {
     const [serverError, setServerError] = useState(null);
 
     useEffect(() => {
+        scrollToTop();
         const authorName = JSON.parse(localStorage.getItem('auth'));
         setAuthor(authorName.username);
     }, [])
@@ -46,18 +49,18 @@ export const AddComment = () => {
                     <form onSubmit={onCommentSubmit}>
                         <div className={styles.form}>
                             <div className={styles.maxWidthWrapper}>
-                                <label className={styles.newcarLbl} htmlFor="author">Author</label>
-                                <input disabled type="text" id="author" className={styles.input} value={author}/>
+                                <label className={styles.newcarLbl} htmlFor="author">AUTHOR</label>
+                                <input disabled type="text" id="author" className={styles.inputAuthor} value={author}/>
                             </div>
                             <div className={styles.maxWidthWrapper}>
-                            <label className={styles.newcarLbl} htmlFor="description">Comment</label>
+                            <label className={styles.newcarLbl} htmlFor="description">COMMENT</label>
                                 <textarea className={`${styles.input} ${styles.inputComment}`} id="description" rows="5" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
                             </div>
                             <div className={styles.maxWidthWrapper}>
                             <p className={styles.errors}>{serverError}</p>
-                            <button className={styles.btn} type="submit">Add Comment</button>
+                            <button className={styles.btn} type="submit">ADD COMMENT</button>
                             <p></p>
-                            <button className={styles.btn} type="button" onClick={onCancel}>Cancel</button>
+                            <button className={styles.btn} type="button" onClick={onCancel}>CANCEL</button>
                             </div>
                         </div>
                     </form>

@@ -3,6 +3,7 @@ import * as carsService from "../../../services/carsService";
 import { useNavigate, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { FormValidatorContext } from "../../../contexts/FormValidatorContext";
+import { scrollToTop } from "../../globalComponents/ScrollArrow";
 import styles from "./../newCar/AddNewCar.module.css";
 
 export const EditCar = () => {
@@ -20,6 +21,7 @@ export const EditCar = () => {
   });
 
   useEffect(() => {
+    scrollToTop();
     carsService
       .getcarDetails(carId)
       .then((data) => {
