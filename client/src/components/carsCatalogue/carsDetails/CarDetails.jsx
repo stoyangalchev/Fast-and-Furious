@@ -70,34 +70,46 @@ export const CarDetails = () => {
           </h1>
           <img className={styles.img} src={car.imageUrl} alt="carImage" />
           <section className="car-info">
-            <h3 className={styles.highlight}>Category</h3>
-            <p className={styles.paragraph}>{car.category}</p>
-            <h3 className={styles.highlight}>Mode</h3>
-            <p className={styles.paragraph}>{car.mode}</p>
-            <h3 className={styles.highlight}>Description</h3>
-            <p className={styles.paragraph}>{car.description}</p>
-            <h3 className={styles.highlight}>Release Date</h3>
-            <p className={styles.paragraph}>
-              <i className={`far fa-calendar-alt ${styles.highlight}`}></i>{" "}
-              {car.date}
-            </p>
-            <h3 className={styles.highlight}>Liked by</h3>
-            <p className={styles.paragraph}>{car.likes} users</p>
-          </section>
-          <h3 className={styles.highlight}>Comments</h3>
-          {comments.map((x) => (
-            <div className="car-info" key={x._id}>
-              <p
-                className={styles.paragraph}
-                style={{ border: "1px solid #008cff" }}
-              >
-                {x.author}: {x.comment}
+            <h3 className={styles.highlight}>Category
+              <p className={styles.paragraph}>{car.category}</p>
+            </h3>
+            
+            <h3 className={styles.highlight}>Mode
+              <p className={styles.paragraph}>{car.mode}</p>
+            </h3>
+            
+            <h3 className={styles.highlight}>Description
+              <p className={styles.paragraph}>{car.description}</p>
+            </h3>
+
+            <h3 className={styles.highlight}>Release Date
+              <p className={styles.paragraph}>
+                <i className={`far fa-calendar-alt ${styles.highlight}`}></i>{" "}
+                {car.date}
               </p>
-            </div>
-          ))}
-          {comments.length === 0 && (
-            <p className={styles.paragraph}>No comments yet.</p>
-          )}
+            </h3>
+          
+            <h3 className={styles.highlight}>Liked by
+              <p className={styles.paragraph}>{car.likes} users</p>
+            </h3>
+        
+          </section>
+          <h3 className={styles.highlight}>Comments
+            {comments.map((x) => (
+              <div className="car-info" key={x._id}>
+                <p
+                  className={styles.paragraph}
+                  style={{ border: "1px solid #008cff" }}
+                >
+                  {x.author}: {x.comment}
+                </p>
+              </div>
+            ))}
+            {comments.length === 0 && (
+              <p className={styles.paragraph}>No comments yet.</p>
+            )}
+          </h3>
+         
           <div className={styles.btnContainer}>
             {!isOwner && !hasLiked && (
               <button className={styles.btn} onClick={oncarLike}>

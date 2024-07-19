@@ -7,17 +7,19 @@
   padding-top: 90px;
   padding-bottom: 90px;
 }
+
 .contentWrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 2rem;
 
-  
+
 }
+
 .contentBox {
   border: 5px groove rgb(0, 148, 246);
-  background-color: #f4f6f8;
+  background-color: rgba(1, 22, 43, 1.5);
   text-align: center;
   padding: 0.5em;
   margin-bottom: 1.5rem;
@@ -25,42 +27,47 @@
   width: 100%;
 
 }
+
 .carTitle {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   font-size: 3rem;
   font-weight: 900;
-  /* Make it bolder */
   line-height: 1.2;
   margin-top: 0;
   font-family: "Roboto", sans-serif;
-  color: #040f28;
+  color: #ffffff;
   text-shadow: 2px 2px #008cff, 5px 5px #040f28;
-  /* Add 4D effect */
 }
+
 .highlight {
   color: #008cff;
 }
+
 .img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
 }
+
 .paragraph {
   font-weight: 700;
   margin-bottom: 0.5rem;
   margin-top: 0;
+  color: #ffffff;
 }
+
 .btnContainer {
   margin-top: 1.5rem;
 }
+
 .btn {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
   line-height: 1.5;
-  color: #777;
+  color: #ffffff;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -73,3 +80,5 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+
