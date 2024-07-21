@@ -18,6 +18,9 @@ export const AboutUs = () => {
                     <div className={styles.list}>
                         <div className={styles.col}>
                             <p className={styles.item}>
+                                <i className={`fa fa-check ${styles.icons}`}></i>Add new car.
+                            </p>
+                            <p className={styles.item}>
                                 <i className={`fa fa-check ${styles.icons}`}></i>Browse our
                                 catalogue.
                             </p>
@@ -25,9 +28,7 @@ export const AboutUs = () => {
                                 <i className={`fa fa-check ${styles.icons}`}></i>Like and
                                 comment on your favorite cars.
                             </p>
-                            <p className={styles.item}>
-                                <i className={`fa fa-check ${styles.icons}`}></i>Add new car.
-                            </p>
+
                         </div>
                         <div className={styles.col}>
                             <p className={styles.item}>
