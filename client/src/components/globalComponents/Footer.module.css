@@ -7,7 +7,6 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-
   background-size: 3px 3px;
   padding-top: 90px;
   padding-bottom: 90px;
@@ -23,7 +22,6 @@
   flex: 0 0 auto;
   width: 50%;
   border-right: 1px solid #008cff;
-
 }
 
 .col2 {
@@ -62,7 +60,7 @@
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1rem;
-  color: #008cff
+  color: #008cff;
 }
 
 .socialMediaContainer {
@@ -163,7 +161,8 @@
 .signUpBtn {
   width: 100%;
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  /* Increased size */
   cursor: pointer;
 }
 
@@ -176,8 +175,6 @@
   border-top: 1px solid #008cff;
   margin-right: auto;
   margin-left: auto;
-
-  
 }
 
 .footerEndWrapper {
@@ -198,9 +195,178 @@
   border-left: 100px solid transparent;
 }
 
-@media (max-width: 890px) {
-  .logoContainer {
-    font-size: 1.6em;
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .col1,
+  .col2 {
+    width: 100%;
+    padding: 0;
+    border-right: none;
+  }
+
+  .footerRow {
+    flex-direction: column;
+  }
+
+  .quicklinksContainer,
+  .newsletterContainer {
+    width: 100%;
   }
 }
 
+@media (max-width: 900px) {
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .logoContainer {
+    font-size: 2em;
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
+  }
+
+  .socialMediaBtn {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+
+  .quicklinksHeading {
+    font-size: 1rem;
+  }
+
+  .quickLink {
+    font-size: 0.9rem;
+  }
+
+  .input {
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+
+ .signUpBtn {
+   font-size: 0.9rem;
+   width: 50%;
+   justify-content: center;
+   padding-bottom: -10px;
+ }
+
+  .footerEndDisclaimer {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+
+  .footerEndShape {
+    border-bottom: 80px solid #008cff;
+    border-left: 80px solid transparent;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .logoContainer {
+    font-size: 1.5em;
+  }
+
+  .paragraph {
+    font-size: 0.8rem;
+  }
+
+  .socialMediaBtn {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+  }
+
+  .quicklinksHeading {
+    font-size: 0.9rem;
+  }
+
+  .quickLink {
+    font-size: 0.8rem;
+  }
+
+  .input {
+    height: 1.8rem;
+    font-size: 0.8rem;
+  }
+
+  .signUpBtn {
+    font-size: 0.9rem;
+    width: 50%;
+    justify-content: center;
+    padding-bottom: -10px;
+  }
+
+  .footerEndDisclaimer {
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+  }
+
+  .footerEndShape {
+    border-bottom: 60px solid #008cff;
+    border-left: 60px solid transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .logoContainer {
+    font-size: 1.2em;
+  }
+
+  .paragraph {
+    font-size: 0.7rem;
+  }
+
+  .socialMediaBtn {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+  }
+
+  .quicklinksHeading {
+    font-size: 0.8rem;
+  }
+
+  .quickLink {
+    font-size: 0.7rem;
+  }
+
+  .input {
+    height: 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .signUpBtn {
+    font-size: 0.9rem;
+    width: 50%;
+    justify-content: center;
+    padding-bottom: -10px;
+    display: block;
+    min-width: 80px;
+  }
+
+  .footerEndDisclaimer {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+
+  .footerEndShape {
+    border-bottom: 40px solid #008cff;
+    border-left: 40px solid transparent;
+  }
+}

@@ -65,10 +65,7 @@ export const EditCar = () => {
             Edit <span className={styles.highlight}>your car</span> and make it
             better
           </h1>
-          <p className={styles.paragraph}>
-            Thank you for keeping our database up-to-date!{" "}
-            <i className="far fa-smile-beam"></i>
-          </p>
+        
         </div>
         <div className={styles.col2}>
           <div className={styles.col2Wrapper}>

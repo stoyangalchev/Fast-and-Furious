@@ -1,5 +1,3 @@
-
-
 .containerHeader {
   width: 100%;
   padding-right: 0.75rem;
@@ -10,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background: linear-gradient(rgba(4, 15, 40, 0.7), rgba(4, 15, 40, 0.7)),
     url(/img/need4speed.jpg) center center no-repeat;
   background-size: cover;
@@ -32,7 +29,6 @@
   animation: glow 2s ease-in-out infinite;
 }
 
-
 @keyframes glow {
   0% {
     text-shadow: 0 0 5px #0bbbd7, 0 0 10px #0bbbd7, 0 0 15px #0bbbd7, 0 0 20px #0bbbd7;
@@ -44,21 +40,6 @@
 
   100% {
     text-shadow: 0 0 5px #0bbbd7, 0 0 10px #0bbbd7, 0 0 15px #0bbbd7, 0 0 20px #0bbbd7;
-  }
-}
-
-
-
-@media (min-width: 1200px) {
-  .sectionTitle {
-    font-size: 8rem;
-  }
-}
-
-
-@media (min-width: 768px) {
-  .newcarBtn {
-    padding: 1rem 3rem 1rem 3rem;
   }
 }
 
@@ -86,12 +67,6 @@
   color: #ffffff;
 }
 
-@media (min-width: 1200px) {
-  .browsecarsHeading {
-    font-size: 3rem;
-  }
-}
-
 .carsSection {
   display: flex;
   flex-wrap: wrap;
@@ -103,12 +78,10 @@
 }
 
 .select {
-
   appearance: none;
   border: 0;
   outline: 0;
   font: inherit;
-
   width: 30rem;
   padding: 1rem 4rem 1rem 1rem;
   background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
@@ -117,22 +90,19 @@
   border-radius: 1.25em;
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
 
+.select::-ms-expand {
+  display: none;
+}
 
-  &::-ms-expand {
-    display: none;
-  }
+.select:focus {
+  outline: auto;
+}
 
-
-  &:focus {
-    outline: auto
-  }
-
-
-  option {
-    color: inherit;
-    background-color: var(--option-bg);
-  }
+.select option {
+  color: inherit;
+  background-color: var(--option-bg);
 }
 
 :root {
@@ -158,4 +128,95 @@
   font-size: 2rem;
   text-align: center;
   width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .containerHeader {
+    height: 600px;
+  }
+
+  .sectionTitle {
+    font-size: 6rem;
+  }
+
+  .containerContent {
+    width: 90%;
+  }
+
+  .browsecarsHeading {
+    font-size: 2.5rem;
+  }
+
+  .select {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .containerHeader {
+    height: 500px;
+  }
+
+  .sectionTitle {
+    font-size: 4rem;
+  }
+
+  .containerContent {
+    width: 95%;
+  }
+
+  .browsecarsHeading {
+    font-size: 2rem;
+  }
+
+  .select {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .containerHeader {
+    height: 400px;
+    padding: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+
+  .containerContent {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .browsecarsHeader {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  .browsecarsHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .carsSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .findcarsHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .nocars {
+    font-size: 1.5rem;
+  }
 }

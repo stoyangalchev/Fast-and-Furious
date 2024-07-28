@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,10 +14,8 @@ body {
   background: linear-gradient(to bottom, #000d16, #000d16);
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
-  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 code {
@@ -23,20 +27,10 @@ code {
   color: white;
   text-align: center;
   font-size: 5rem;
-  margin: 0.5rem 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 h1:hover {
   color: #76d6f1;
-}
-
-@media (max-width: 600px) {
-  body {
-    padding: 0.5rem;
-  }
-
-  .h1 {
-    font-size: 3rem;
-    margin: 0.25rem 0;
-  }
 }

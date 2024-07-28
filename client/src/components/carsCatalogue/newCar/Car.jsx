@@ -30,8 +30,10 @@ export const Car = ({ car }) => {
                 </span>
               </div>
             </div>
-            <h4 className={styles.heading}>{car.name}</h4>
-            {isAuthenticated && <h5> See more{" "}<i className="bi bi-arrow-right" ></i></h5>}
+            <div className={styles.carNameSeeMoreContainer}>
+              <h4 className={styles.heading}>{car.name}</h4>
+              {isAuthenticated && <h5 className={styles.carNameSeeMore}> See more{" "}<i className="bi bi-arrow-right"></i></h5>}
+            </div>
           </div>
         </div>
       </Link>

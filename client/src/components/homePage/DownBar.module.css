@@ -8,7 +8,8 @@
 
 .wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    /* Changed to flex-start */
     flex-wrap: wrap;
     margin-top: .1rem;
     margin-right: .1rem;
@@ -16,7 +17,8 @@
 }
 
 .firstLastItemWrapper {
-    text-align: center;
+    text-align: left;
+    padding-left: 5px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 30%;
@@ -43,9 +45,10 @@
 }
 
 .secondItemWrapper {
-    text-align: center;
+    text-align: left;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 5px;
     border-left: 1px solid #dee2e6;
     border-right: 1px solid #dee2e6;
     width: 30%;
@@ -55,4 +58,92 @@
     color: #008cff;
     font-size: 2.5rem;
     margin-right: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .DownContainer {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    .wrapper {
+        margin-top: 0.2rem;
+        margin-right: 0.2rem;
+        margin-left: 0.2rem;
+    }
+
+    .firstLastItemWrapper,
+    .secondItemWrapper {
+        width: 45%;
+        border-left: 0px solid #dee2e6;
+            border-right: 0px solid #dee2e6;
+    }
+
+    .textBold {
+        font-size: 0.9rem;
+    }
+
+    .highlight {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .DownContainer {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .wrapper {
+        margin-top: 0.3rem;
+        margin-right: 0.3rem;
+        margin-left: 0.3rem;
+    }
+
+    .firstLastItemWrapper,
+    .secondItemWrapper {
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .textBold {
+        font-size: 0.8rem;
+    }
+
+    .highlight {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .DownContainer {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .wrapper {
+        margin-top: 0.4rem;
+        margin-right: 0.4rem;
+        margin-left: 0.4rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .firstLastItemWrapper,
+    .secondItemWrapper {
+        width: 100%;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+
+    }
+
+    .textBold {
+        font-size: 0.7rem;
+    }
+
+    .highlight {
+        font-size: 1.5rem;
+    }
 }
