@@ -162,8 +162,13 @@
   width: 100%;
   margin-top: 1rem;
   font-size: 1.2rem;
-  /* Increased size */
   cursor: pointer;
+}
+
+.signUpBtn:hover {
+  background-color: #008cff;
+  color: #fff;
+  transition: 0ms;
 }
 
 .footerEndContainer {
@@ -252,12 +257,12 @@
     font-size: 0.9rem;
   }
 
- .signUpBtn {
-   font-size: 0.9rem;
-   width: 50%;
-   justify-content: center;
-   padding-bottom: -10px;
- }
+  .signUpBtn {
+    font-size: 0.9rem;
+    width: 50%;
+    justify-content: center;
+    padding-bottom: -10px;
+  }
 
   .footerEndDisclaimer {
     padding: 1rem 2rem 1rem 2rem;
@@ -360,6 +365,8 @@
     display: block;
     min-width: 80px;
   }
+
+
 
   .footerEndDisclaimer {
     padding: 0.5rem 1rem 0.5rem 1rem;

@@ -8,3 +8,7 @@
     font-size: 5rem;
     z-index: 1000;
 }
+.scrollTop:hover {
+    color: #ffffff;
+    transition: 0ms;
+}

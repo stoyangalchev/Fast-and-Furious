@@ -1,6 +1,7 @@
 import styles from "./DownBar.module.css";
 
 export const DownBar = () => {
+    
     return (
         <div className={styles.DownContainer}>
             <div className={styles.wrapper}>

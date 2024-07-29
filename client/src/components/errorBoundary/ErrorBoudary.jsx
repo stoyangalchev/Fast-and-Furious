@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import styles from "./ErrorBoundary.module.css";
 export default class ErrorBoundary extends Component {
     constructor(props) {
         super(props);
@@ -23,14 +23,7 @@ export default class ErrorBoundary extends Component {
                 <>
 
                     <h1>Something went wrong.</h1>
-                    <img style={{
-                        width: '1000px',
-                        height: 'auto',
-                        borderRadius: '10px',
-                        border: '2px solid black',
-                        display: 'block',
-                        margin: 'auto',
-                    }} src="/img/404DontCry.jpeg" alt="" />
+                    <img className={styles.errorStyle} src="/img/404DontCry.jpeg" alt="" />
                     <h1>Check your internet connection and try again.</h1>
                 </>
             )

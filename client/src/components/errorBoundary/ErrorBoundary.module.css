@@ -1,0 +1,23 @@
+.errorStyle {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .errorStyle {
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .errorStyle {
+        width: 100%;
+        max-width: 300px;
+    }
+}

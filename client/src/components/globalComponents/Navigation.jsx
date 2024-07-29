@@ -6,6 +6,7 @@ import styles from "./Navigation.module.css";
 import { ScrollArrow, scrollToTop } from "./ScrollArrow";
 export const Navigation = () => {
   const { isAuthenticated } = useContext(AuthContext);
+  
 
   return (
     <div className={styles.container}>
