@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Car } from "../newCar/Car";
-import { NewCarButton} from "../../../utils/NewCarButton/NewCarButton"
+import { NewCarButton} from "../../../shared/NewCarButton/NewCarButton"
 import { useContext } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { Link } from "react-router-dom";

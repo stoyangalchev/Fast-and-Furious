@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as carsService from "../../services/carsService";
 import { Car } from "./newCar/Car";
-import { NewCarButton } from "../../utils/NewCarButton/NewCarButton";
+import { NewCarButton } from "../../shared/NewCarButton/NewCarButton";
 import { scrollToTop } from "../globalComponents/ScrollArrow";
 
 import styles from "./Catalogue.module.css";
