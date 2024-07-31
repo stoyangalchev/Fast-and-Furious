@@ -1,3 +1,4 @@
+/* Base styles */
 :root {
   --primary-color: #008cff;
   --error-color: #dc3545;
@@ -37,7 +38,7 @@
 }
 
 .col1 {
-  margin-right: 2rem;
+  margin: auto;
 }
 
 .col2 {
@@ -59,12 +60,6 @@
   background: linear-gradient(45deg, var(--primary-color), var(--btn-hover-bg-color));
   background-clip: text;
   color: transparent;
-}
-
-@media (min-width: 1200px) {
-  .heading {
-    font-size: 2.5rem;
-  }
 }
 
 .highlight {
@@ -152,4 +147,134 @@
 .btn:hover {
   background-color: var(--btn-hover-bg-color);
   transform: scale(1.02);
+}
+
+/* Media Queries */
+
+@media (min-width: 1200px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+}
+
+@media (max-width: 1199px) and (min-width: 900px) {
+  .formWrapper {
+    width: 70%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+  .formWrapper {
+    width: 80%;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 599px) {
+  .formWrapper {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .paragraph {
+    font-size: 18px;
+  }
+
+  .item {
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+
+  .input {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    height: 45px;
+  }
+}
+
+@media (max-width: 299px) {
+  .formWrapper {
+    width: 100%;
+
+  }
+
+  .highlight {
+    font-size: 190% ;
+  }
+
+  .heading {
+    font-size: 1.25rem;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+
+
+  .item {
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+
+  .input {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    height: 45px;
+  }
+}
+
+@media (max-width: 249px) {
+  .formWrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+
+  .paragraph {
+    font-size: 14px;
+  }
+
+  .item {
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+
+  .input {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    height: 45px;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+    height: 2.5rem;
+  }
+
+  .error {
+    font-size: 0.75rem;
+  }
 }
