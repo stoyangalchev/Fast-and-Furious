@@ -9,6 +9,7 @@ export const Team = () => {
                     className={styles.fastfive}
                     src="/img/team/fast-and-furious-future.jpg"
                     alt=""
+
                 />
             </div>
             <div className={styles.header}>

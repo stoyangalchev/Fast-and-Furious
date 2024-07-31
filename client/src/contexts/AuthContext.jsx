@@ -1,34 +1,31 @@
-import { createContext } from "react";
+import React, { createContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
+// Create the AuthContext
 export const AuthContext = createContext();
 
-export const AuthProvider = ({
-    children,
-}) => {
+// Create the AuthProvider component
+export const AuthProvider = ({ children }) => {
     const [state, setState] = useLocalStorage('auth', {});
 
     function setStateFunc(data) {
-
         if (data.token) {
-            setState(data)
+            setState(data);
         } else {
-            setState({})
-            localStorage.removeItem('auth')
+            setState({});
+            localStorage.removeItem('auth');
         }
     }
-
 
     const contextValues = {
         setStateFunc,
         isAuthenticated: !!state.token,
         userId: state._id
-    }
+    };
+
     return (
-        <>
-            <AuthContext.Provider value={contextValues}>
-                {children}
-            </AuthContext.Provider>
-        </>
-    )
-}
+        <AuthContext.Provider value={contextValues}>
+            {children}
+        </AuthContext.Provider>
+    );
+};

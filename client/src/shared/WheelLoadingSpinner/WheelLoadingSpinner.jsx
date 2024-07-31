@@ -5,7 +5,7 @@ export const WheelLoadingSpinner = () => {
     <div className="spinner-container">
       <div className={styles["wheel"]}>
         <img
-          src="https://i.ibb.co/1Zgw6P9/car-wheel-13.png"
+          src="/img/car-wheel-11530932245yuklftkqsu.png"
           alt=""
           border="0"
           width="150"
