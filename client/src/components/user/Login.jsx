@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { FormValidatorContext } from "../../contexts/FormValidatorContext";
 import styles from './Auth.module.css'
+import { scrollToTop } from "../globalComponents/ScrollArrow";
 
 export const Login = () => {
     const { setStateFunc } = useContext(AuthContext);
@@ -17,7 +18,7 @@ export const Login = () => {
         password: "",
     };
     const redirect = useNavigate();
-    
+
     const [user, setUser] = useState(userData);
 
     const onChangeHandler = (e) => {
@@ -30,6 +31,7 @@ export const Login = () => {
             .then((loggedUser) => {
                 setStateFunc(loggedUser);
                 redirect("/");
+                scrollToTop
             })
             .catch((err) => {
                 setServerError(err);
