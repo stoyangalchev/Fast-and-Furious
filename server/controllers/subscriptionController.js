@@ -3,25 +3,21 @@ const { errorHandler } = require("../utils/errorHandler");
 const router = require("express").Router();
 
 router.post("/", async (req, res) => {
-  const { email } = req.body;
+  const { email, userId } = req.body;
 
-  // Extract userId from the request (assuming it's stored in req.userId)
-  const userId = req.userId;
   try {
-    // Use Mongoose to find a subscription in the Subscription collection that matches the userId
     const existingSubscription = await subscriptionModel.findOne({
       user: userId,
+    
     });
-
-    // If a subscription is found, respond that the user is already subscribed
+ 
     if (existingSubscription) {
       return res.status(409).json({
-        message: "User is already subscribed",
+        message: "You are already subscribed ",
       });
     }
 
-    
-    await subscriptionModel.create(email);
+    await subscriptionModel.create({ email, user: userId });
     res.status(200).json({
       message: "Subscription created successfully",
       email,
@@ -30,4 +26,26 @@ router.post("/", async (req, res) => {
     errorHandler(error, res, req);
   }
 });
+
+router.get("/check/:userId", async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const existingSubscription = await subscriptionModel.findOne({
+      user: userId,
+    });
+    if (existingSubscription) {
+      return res.status(200).json({
+        isSubscribed: true,
+      });
+    } else {
+      return res.status(200).json({
+        isSubscribed: false,
+      });
+    }
+  } catch (error) {
+    errorHandler(error, res, req);
+  }
+});
+
 module.exports = router;

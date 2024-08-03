@@ -17,7 +17,7 @@ const Main = () => {
       const timer = setTimeout(() => {
         setIsLoading(false);
         sessionStorage.setItem("isLoading", JSON.stringify(false));
-      }, 5000);
+      }, 4000);
 
       return () => clearTimeout(timer);
     }
@@ -34,5 +34,7 @@ const Main = () => {
 
 const rootElement = document.getElementById("root");
 createRoot(rootElement).render(<Main />);
+
+
 
 reportWebVitals();

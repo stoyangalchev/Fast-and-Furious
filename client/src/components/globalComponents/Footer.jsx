@@ -1,42 +1,53 @@
-
 import { Link } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
-
 import * as subscriptionService from "../../services/subscriptionService";
 import { FormValidatorContext } from "../../contexts/FormValidatorContext";
-import { getAuthToken } from "../../services/getToken";
-
-import { scrollToTop } from "./ScrollArrow";
 import styles from "./Footer.module.css";
+import { scrollToTop } from "../../components/globalComponents/ScrollArrow";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const Footer = () => {
-    const [email, setEmail] = useState("");
-    const [subscripton, setSubscription] = useState(false);
-    const [hasAuthToken, sethasAuthToken] = useState(false)
-    const { UserValidator, errors } = useContext(FormValidatorContext);
 
-    const emailChangeHandler = (e) => {
-        setEmail(e.target.value);
-    };
-
+    const [isSubscribed, setIsSubscribed] = useState(false);
+    const [error, setError] = useState("");
+    const { userId, isAuthenticated, email } = useContext(AuthContext)
 
     useEffect(() => {
-        if (getAuthToken() !== null) {
-            sethasAuthToken(true)
+        if (isAuthenticated) {
+            subscriptionService.checkSubscription(userId)
+                .then((response) => {
+                    setIsSubscribed(response.isSubscribed);
+                })
+                .catch((error) => {
+                    console.error("Failed to check subscription status", error);
+                });
         }
-    }, [hasAuthToken])
+    }, [isAuthenticated, userId]);
 
     const createSubscription = (e) => {
         e.preventDefault();
         const data = {
-            email: email,
+            userId,
+            email,
+            isSubscribed: true
         };
-        subscriptionService.saveSubscription(data).then(() => {
-            setSubscription(true);
-            setEmail("");
-        });
-    };
 
+        const handleSuccess = () => {
+            setIsSubscribed(true);
+        };
+
+        const handleError = (error) => {
+            if (error.message === 'You are already subscribed') {
+                setError('You are already subscribed');
+            } else {
+                setError(error.message);
+            }
+        };
+
+        subscriptionService.saveSubscription(data)
+            .then(handleSuccess)
+            .catch(handleError);
+    };
 
     return (
         <>
@@ -120,29 +131,21 @@ export const Footer = () => {
                                     </Link>
                                 </div>
                             </div>
-                            {hasAuthToken && (
+                            {isAuthenticated && (
                                 <div className={styles.newsletterContainer}>
                                     <h4 className={styles.quicklinksHeading}>Newsletter</h4>
-                                    {subscripton && (
+                                    {isSubscribed && (
                                         <p className={styles.paragraph}>
-                                            You have succesfully subscribed to our newsletter!
+                                            You have successfully subscribed to our newsletter!
                                         </p>
                                     )}
-                                    <p className={styles.errors}>{errors?.email}</p>
-                                    {!subscripton && (
+
+                                    {error && <p className={styles.errors}>{error}</p>}
+                                    {!isSubscribed && (
                                         <form
                                             className={styles["input-group"]}
                                             onSubmit={createSubscription}
                                         >
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                className={styles.input}
-                                                placeholder="Your Email Address"
-                                                value={email}
-                                                onBlur={UserValidator}
-                                                onChange={emailChangeHandler}
-                                            />
                                             <button
                                                 className={`${styles.signUpBtn} ${styles.socialMediaBtn}`}
                                                 type="submit"
@@ -156,7 +159,7 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
             <div className={styles.footerEndContainer}>
                 <div className={styles.footerEndWrapper}>
                     <div className={styles.footerEndDisclaimer}>

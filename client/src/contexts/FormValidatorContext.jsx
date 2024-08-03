@@ -40,6 +40,7 @@ export const FormValidatorProvider = ({ children }) => {
     const formErrors = {};
     const emailRegex = new RegExp(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
+
     if (target === "firstname" && value.length === 0) {
       formErrors.firstname = "First Name is required";
     }
@@ -58,9 +59,14 @@ export const FormValidatorProvider = ({ children }) => {
     setErrors(formErrors);
   };
 
+  const clearErrors = () => {
+    setErrors({});
+  };
+
   const contextValues = {
     carValidator,
     UserValidator,
+    clearErrors,
     errors,
   };
   return (
