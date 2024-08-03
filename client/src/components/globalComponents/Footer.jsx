@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import * as subscriptionService from "../../services/subscriptionService";
-import { FormValidatorContext } from "../../contexts/FormValidatorContext";
+
 import styles from "./Footer.module.css";
 import { scrollToTop } from "../../components/globalComponents/ScrollArrow";
 import { AuthContext } from "../../contexts/AuthContext";
 
 export const Footer = () => {
 
-    const [isSubscribed, setIsSubscribed] = useState(false);
+    const [isSubscribed, setIsSubscribed] = useState(null);
     const [error, setError] = useState("");
     const { userId, isAuthenticated, email } = useContext(AuthContext)
 
@@ -34,6 +34,7 @@ export const Footer = () => {
 
         const handleSuccess = () => {
             setIsSubscribed(true);
+            setError('')
         };
 
         const handleError = (error) => {

@@ -9,9 +9,6 @@ const subscriptionSchema = new Schema({
       "Email is not valid!",
     ],
   },
-
-  // Reference to the User model
-
   user: {
     type: Schema.Types.ObjectId,
     ref: "User",
@@ -19,7 +16,7 @@ const subscriptionSchema = new Schema({
   },
   isSubscribed: {
     type: Boolean,
-    default: false,
+    required: true,
   },
 });
 

@@ -3,21 +3,24 @@ const { errorHandler } = require("../utils/errorHandler");
 const router = require("express").Router();
 
 router.post("/", async (req, res) => {
-  const { email, userId } = req.body;
+  const { email, userId, isSubscribed } = req.body;
 
   try {
     const existingSubscription = await subscriptionModel.findOne({
       user: userId,
-    
     });
- 
+
     if (existingSubscription) {
       return res.status(409).json({
         message: "You are already subscribed ",
       });
     }
 
-    await subscriptionModel.create({ email, user: userId });
+    await subscriptionModel.create({
+      email,
+      user: userId,
+      isSubscribed: isSubscribed,
+    });
     res.status(200).json({
       message: "Subscription created successfully",
       email,
