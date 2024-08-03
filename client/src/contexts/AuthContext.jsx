@@ -20,7 +20,8 @@ export const AuthProvider = ({ children }) => {
         setStateFunc,
         isAuthenticated: !!state.token,
         userId: state._id,
-        email: state.email
+        email: state.email,
+        username: state.username,
     };
 
     return (

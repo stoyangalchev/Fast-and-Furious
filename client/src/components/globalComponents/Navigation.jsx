@@ -5,8 +5,8 @@ import styles from "./Navigation.module.css";
 
 import { ScrollArrow, scrollToTop } from "./ScrollArrow";
 export const Navigation = () => {
-  const { isAuthenticated } = useContext(AuthContext);
-  
+  const { isAuthenticated, username } = useContext(AuthContext);
+
 
   return (
     <div className={styles.container}>
@@ -38,20 +38,20 @@ export const Navigation = () => {
             </Link>
 
             {isAuthenticated && (
-              <Link to="/my-cars" onClick={scrollToTop}>
-                <button className={styles.shadow__btn1}>My car</button>
-              </Link>
-            )}
-            {isAuthenticated && (
-              <Link to="/new-car" onClick={scrollToTop}>
-                <button className={styles.shadow__btn1}>Add Car</button>
-              </Link>
-            )}
+              <>
+                <Link to="/my-cars" onClick={scrollToTop}>
+                  <button className={styles.shadow__btn1}>My car</button>
+                </Link>
+                <Link to="/new-car" onClick={scrollToTop}>
+                  <button className={styles.shadow__btn1}>Add Car</button>
+                </Link>
 
-            {isAuthenticated && (
-              <Link to="/logout" onClick={scrollToTop}>
-                <button className={styles.shadow__btn_special}>Logout</button>
-              </Link>
+                <button className={styles.shadow__btn_special_username}>{username}</button>
+
+                <Link to="/logout" onClick={scrollToTop}>
+                  <button className={styles.shadow__btn_special}>Logout</button>
+                </Link>
+              </>
             )}
             {!isAuthenticated && (
               <>

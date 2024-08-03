@@ -144,6 +144,31 @@
   color: rgb(0, 140, 255);
 }
 
+.shadow__btn_special_username {
+  margin-left: 20px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0s;
+  transition-property: box-shadow;
+ 
+}
+
+.shadow__btn_special_username {
+  background: rgb(7, 195, 10);
+  box-shadow: 0 0 25px rgb(1, 20, 35);
+}
+
+
+
 .btn {
   display: flex;
   justify-content: center;
