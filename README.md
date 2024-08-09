@@ -2,7 +2,7 @@
 
 # Fast and Furious 
 
-# Generated with <h1>Vite</h1> 
+> # Generated with <h1>Vite ⚡️</h1> 
 
 Fast and Furious is a web application built with React and Vite, where users can authenticate themselves, add vehicles to the site, comment on them, like them, and view detailed information about each vehicle.
 
