@@ -10,6 +10,7 @@ In PROGRES >>>......
 - **Comment and Like**: Engage with other users by commenting and liking their vehicles.
 - **Vehicle Details**: Get detailed insights into each vehicle's specs and features.
 - **Newsletter Sign-Up**: Stay updated with the latest news by subscribing to our newsletter.
+- **Responsive design** : Try it with all devices.
 
 ## 🛠️ Technologies Used
 
