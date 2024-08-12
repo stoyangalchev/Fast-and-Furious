@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import React from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as carsService from "../../services/carsService";
 import { Car } from "./newCar/Car";
@@ -43,7 +43,7 @@ export const Catalogue = () => {
                 <h1 className={styles.sectionTitle}> Catalogue</h1>
                 {isAuthenticated && (
                     <Link to="/new-car" >
-                        <NewCarButton tittle={"Add New Car"}/>
+                        <NewCarButton tittle={"Add New Car"} />
                     </Link>
                 )}
             </section>
@@ -112,17 +112,22 @@ export const Catalogue = () => {
                         </>
                     )}
                 </div>
+
                 <div className={styles.carsSection}>
+
                     {filteredList.length === 0 &&
                         !searchValue &&
                         cars?.map((c) => <Car key={c._id} car={c} />)}
+
                     {filteredList.length === 0 && searchValue && (
                         <p className={styles.nocars}>
                             There are no cars in our database that match your search.
                         </p>
                     )}
+
                     {filteredList.length > 0 &&
                         filteredList.map((c) => <Car key={c._id} car={c} />)}
+
                 </div>
             </section>
         </>
