@@ -9,10 +9,10 @@ export const ImageInfo = () => {
                 <div className={styles.overlayInfo}>
                     <div className={styles.textContainer}>
                         <i className={`fab fa-react ${styles.icon}`}></i>
-                        <h1 className={styles.heading}>Chose your Reactive car</h1>
-                        <div className="divBtn"> <Link to="/cars" className={styles.btn}>
-                            Browse cars
-                        </Link></div>
+                        <Link to="/cars" className={styles.heading}>
+                            <h1 >Chose your Reactive car</h1>
+                        </Link>
+                        
                     </div>
                 </div>
             </div>

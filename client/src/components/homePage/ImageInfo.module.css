@@ -70,6 +70,15 @@
     border-radius: 0.65rem;
     clear: both;
 }
+.btn:hover{
+    
+    color: #001c44;
+        box-shadow: 0 0 1px rgb(206, 207, 208),
+            0 0 25px rgb(132, 176, 212),
+            0 0 50px rgb(84, 147, 198),
+            0 0 100px rgb(195, 196, 198);
+
+}
 
 .heading {
     color: azure;
@@ -80,6 +89,7 @@
     margin-bottom: 0.5rem;
     font-family: "Roboto", sans-serif;
     font-size: calc(1.375rem + 1.5vw);
+    text-decoration: none;
 }
 
 /* Media Queries */
