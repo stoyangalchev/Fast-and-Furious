@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 
 import styles from "./Car.module.css";
 
 
-export const Car = ({ car }) => {
+export const Car = memo(({ car }) => {
   const { isAuthenticated } = useContext(AuthContext);
 
   return (
@@ -40,4 +40,4 @@ export const Car = ({ car }) => {
     </section>
 
   );
-};
+})
