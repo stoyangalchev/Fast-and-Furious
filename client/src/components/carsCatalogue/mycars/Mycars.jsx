@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
-import { Car } from "../newCar/Car";
-import { NewCarButton} from "../../../shared/NewCarButton/NewCarButton"
+import { lazy, useEffect, useState } from "react";
+
+import { NewCarButton } from "../../../shared/NewCarButton/NewCarButton"
 import { useContext } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 
 import * as carsService from "../../../services/carsService";
 import styles from "../Catalogue.module.css";
+
+const Car = lazy(() => import('./../newCar/Car'))
 
 export const Mycars = () => {
   const { userId } = useContext(AuthContext);

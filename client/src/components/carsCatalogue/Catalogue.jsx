@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as carsService from "../../services/carsService";
-import { Car } from "./newCar/Car";
+import  Car  from "./newCar/Car";
 import { NewCarButton } from "../../shared/NewCarButton/NewCarButton";
 import { scrollToTop } from "../globalComponents/ScrollArrow";
 

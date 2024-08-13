@@ -6,7 +6,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import styles from "./Car.module.css";
 
 
-export const Car = memo(({ car }) => {
+ const Car = memo(({ car }) => {
   const { isAuthenticated } = useContext(AuthContext);
 
   return (
@@ -41,3 +41,5 @@ export const Car = memo(({ car }) => {
 
   );
 })
+
+export default Car

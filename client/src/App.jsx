@@ -1,12 +1,12 @@
 
 import { Routes, Route } from "react-router-dom";
-
+import React, { Suspense, lazy } from 'react';
 import { AuthProvider } from "./contexts/AuthContext";
 import { FormValidatorProvider } from "./contexts/FormValidatorContext";
 
 import { AuthenticatedRouting } from "./components/authRoutes/AuthenticatedRouting";
 
-import { Team } from "./components/teamInfo/Team";
+// import { Team } from "./components/teamInfo/Team";
 import { AddNewCar } from "./components/carsCatalogue/newCar/AddNewCar";
 import { Catalogue } from "./components/carsCatalogue/Catalogue";
 import { EditCar } from "./components/carsCatalogue/editCar/Editcar";
@@ -26,6 +26,8 @@ import { Mycars } from "./components/carsCatalogue/mycars/Mycars";
 import { ScrollArrow } from "./components/globalComponents/ScrollArrow";
 
 import ErrorBoundary from "./components/errorBoundary/ErrorBoudary";
+
+const Team = lazy(() => import('./components/teamInfo/Team'));
 
 function App() {
 

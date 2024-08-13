@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Car } from '../newCar/Car'
+import { lazy } from "react";
 import { useContext } from "react";
 import { AuthContext } from '../../../contexts/AuthContext';
 import * as carsService from '../../../services/carsService';
 import styles from '../Catalogue.module.css'
 
+const Car = lazy(() => import('./../newCar/Car'))
 export const Likedcars = () => {
     const {userId} = useContext(AuthContext);
     const [cars, setcars] = useState(null);

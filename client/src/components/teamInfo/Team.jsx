@@ -1,6 +1,6 @@
 import styles from "./Team.module.css";
 
-export const Team = () => {
+const Team = () => {
 
     return (
         <div className={styles.container}>
@@ -166,3 +166,5 @@ export const Team = () => {
         </div>
     );
 };
+
+export default Team

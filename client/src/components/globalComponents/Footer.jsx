@@ -104,6 +104,7 @@ export const Footer = () => {
                             </Link>
                         </div>
                     </div>
+
                     <div className={styles.col2}>
                         <div className={styles.col2Wrapper}>
                             <div className={styles.quicklinksContainer}>
@@ -178,6 +179,7 @@ export const Footer = () => {
                     <div className={styles.footerEndShape}></div>
                 </div>
             </div>
+            
         </>
     );
 };
