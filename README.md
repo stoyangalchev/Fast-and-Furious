@@ -5,7 +5,7 @@
 
 ## 📸 Screenshots
 
-![App Screenshot](./screenshots/Home%20Page(User).png)
+![App Screenshot](./Screenshots/Home%20Page(User).png)
 
 ## 🚀 Features
 
