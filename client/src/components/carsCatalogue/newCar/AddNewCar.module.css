@@ -165,6 +165,10 @@
   border-radius: 10px;
 }
 
+.btn:hover{ 
+  color :#fff
+}
+
 @media (min-width: 992px) {
   .col1 {
     width: 33.33333%;
