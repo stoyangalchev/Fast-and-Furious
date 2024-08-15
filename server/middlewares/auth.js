@@ -1,10 +1,13 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
+require("dotenv").config();
+  const tokenSecret = process.env.TOKEN_SECRET;
 
-const TOKEN_SECRET = "q390vnodzmgszdfgsdz";
 
 module.exports = () => (req, res, next) => {
+
+
   if (parseToken(req, res)) {
     req.auth = {
       register,
@@ -106,7 +109,7 @@ function generateToken(userData) {
       username: userData.username,
       email: userData.email,
     },
-    TOKEN_SECRET
+    tokenSecret
   );
 }
 
@@ -115,7 +118,7 @@ function parseToken(req, res) {
 
   if (token) {
     try {
-      const userData = jwt.verify(token, TOKEN_SECRET);
+      const userData = jwt.verify(token, tokenSecret);
       req.user = userData;
     } catch (err) {
       return res
