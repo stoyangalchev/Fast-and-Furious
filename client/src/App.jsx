@@ -1,6 +1,6 @@
 
 import { Routes, Route } from "react-router-dom";
-import React, {  lazy } from 'react';
+import React from 'react';
 import { AuthProvider } from "./contexts/AuthContext";
 import { FormValidatorProvider } from "./contexts/FormValidatorContext";
 

@@ -1,4 +1,5 @@
 import styles from "./Team.module.css";
+import React from "react";
 
 export const Team = () => {
 

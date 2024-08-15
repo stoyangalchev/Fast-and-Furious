@@ -1,5 +1,5 @@
 import styles from './DeletionMessage.module.css'
-
+import React from 'react'
 export const DeletionMessage = ({
     show,
     onClose,

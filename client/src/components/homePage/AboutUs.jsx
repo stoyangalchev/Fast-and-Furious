@@ -1,5 +1,5 @@
 import styles from "./AboutUs.module.css";
-
+import React from "react";
 export const AboutUs = () => {
     return (
         <div className={styles.container}>

@@ -1,5 +1,5 @@
 import styles from "./../WheelLoadingSpinner/WheelLoadingSpinner.module.css";
-
+import React from "react";
 export const WheelLoadingSpinner = () => {
   return (
     <div className="spinner-container">
@@ -10,7 +10,7 @@ export const WheelLoadingSpinner = () => {
           border="0"
           width="150"
           height="150"
-         
+
         />
       </div>
       <h1>Fast & Furious </h1>

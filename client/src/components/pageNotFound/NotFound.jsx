@@ -1,7 +1,8 @@
 import { scrollToTop } from '../globalComponents/ScrollArrow';
 import styles from './NotFound.module.css'
-
+import React from 'react'
 export const NotFound = () => {
+    scrollToTop();
     return (
         <div className={styles.container}>
             <div className={styles.contentWrapper}>

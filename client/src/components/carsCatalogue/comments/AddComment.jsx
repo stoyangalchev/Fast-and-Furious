@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as commentsService from '../../../services/commentsService'
 import { useNavigate, useParams } from 'react-router-dom';
 import { scrollToTop } from '../../globalComponents/ScrollArrow';

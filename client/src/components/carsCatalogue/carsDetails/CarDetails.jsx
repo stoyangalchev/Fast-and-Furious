@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import * as carsService from "../../../services/carsService";
 import * as commentsService from "../../../services/commentsService";
 import { DeletionMessage } from "../modals/DeletionMessage";

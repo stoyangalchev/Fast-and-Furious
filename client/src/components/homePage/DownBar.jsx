@@ -1,5 +1,5 @@
 import styles from "./DownBar.module.css";
-
+import React from "react";
 export const DownBar = () => {
     
     return (

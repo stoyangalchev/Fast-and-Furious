@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { lazy } from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from '../../../contexts/AuthContext';
 import * as carsService from '../../../services/carsService';
 import styles from '../Catalogue.module.css'

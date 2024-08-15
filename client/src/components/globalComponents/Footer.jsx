@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import * as subscriptionService from "../../services/subscriptionService";
 
 import styles from "./Footer.module.css";

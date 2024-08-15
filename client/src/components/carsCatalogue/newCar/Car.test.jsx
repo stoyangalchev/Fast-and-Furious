@@ -4,8 +4,7 @@ import { act } from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
-import { Car } from "./Car";
-
+import Car from './Car';
 const car = {
   _id: "1",
   name: "Test Car",

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as authService from "../../services/authService";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { FormValidatorContext } from "../../contexts/FormValidatorContext";
 import styles from './Auth.module.css'
