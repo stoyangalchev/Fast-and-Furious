@@ -1,15 +1,17 @@
 import * as fetchData from "./fetchData";
+import { url } from "./utils";
 
-const baseUrl = "http://localhost:3005/auth";
+// const baseUrl = "http://localhost:3005/auth";
+const baseUrl = url;
 
 export const register = async (data) => {
-  return await fetchData.post(`${baseUrl}/register`, data);
+  return await fetchData.post(`${baseUrl}/auth/register`, data);
 };
 
 export const login = async (data) => {
-  return await fetchData.post(`${baseUrl}/login`, data);
+  return await fetchData.post(`${baseUrl}/auth/login`, data);
 };
 
 export const logout = async () => {
-  return await fetchData.get(`${baseUrl}/logout`);
+  return await fetchData.get(`${baseUrl}/auth/logout`);
 };

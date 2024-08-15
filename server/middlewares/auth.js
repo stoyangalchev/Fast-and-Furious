@@ -2,12 +2,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 require("dotenv").config();
-  const tokenSecret = process.env.TOKEN_SECRET;
-
+const tokenSecret = process.env.TOKEN_SECRET;
 
 module.exports = () => (req, res, next) => {
-
-
   if (parseToken(req, res)) {
     req.auth = {
       register,
@@ -32,7 +29,6 @@ module.exports = () => (req, res, next) => {
     });
     return await user.save();
   }
-
 
   async function getUserByUsername(username) {
     const user = User.findOne({ username });
