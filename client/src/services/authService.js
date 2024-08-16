@@ -1,8 +1,8 @@
 import * as fetchData from "./fetchData";
 import { url } from "./utils";
 
-// const baseUrl = "http://localhost:3005/auth";
-const baseUrl = url;
+const baseUrl = "http://localhost:3005/auth";
+// const baseUrl = url;
 
 export const register = async (data) => {
   return await fetchData.post(`${baseUrl}/auth/register`, data);

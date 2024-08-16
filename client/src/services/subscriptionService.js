@@ -1,9 +1,9 @@
 import * as fetchData from "./fetchData";
 import { url } from "./utils";
 
-// const baseUrl = "http://localhost:3005/subscribe";
+const baseUrl = "http://localhost:3005/subscribe";
 
-const baseUrl = `${url}/subscribe`;
+// const baseUrl = `${url}/subscribe`;
 
 export const saveSubscription = async (data) => {
   return await fetchData.post(baseUrl, data);
