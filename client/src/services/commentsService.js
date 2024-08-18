@@ -1,14 +1,14 @@
 import * as fetchData from "./fetchData";
 import { url } from "./utils";
 
-const commentsUrl = 'http://localhost:3005/comments';
+// const baseUrl = 'http://localhost:3005';
 
-// const baseUrl = `${url}/comments`;
+const baseUrl = url;
 
 export const getComments = async () => {
-  return await fetchData.get(commentsUrl);
+  return await fetchData.get(`${baseUrl}/comments`);
 };
 
 export const createComment = async (data) => {
-  return await fetchData.post(commentsUrl, data);
+  return await fetchData.post(`${baseUrl}/comments`, data);
 };
