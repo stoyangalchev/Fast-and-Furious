@@ -1,2 +1,3 @@
 //Backend URL MongoDB Atlas and Render
-export const url = "https://fast-and-furious-sds3.onrender.com";
+
+export const url = process.env.REACT_APP_API_URL;
