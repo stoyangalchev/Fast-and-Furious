@@ -6,9 +6,9 @@ const commentsUrl = 'http://localhost:3005/comments';
 // const baseUrl = `${url}/comments`;
 
 export const getComments = async () => {
-  return await fetchData.get(baseUrl);
+  return await fetchData.get(commentsUrl);
 };
 
 export const createComment = async (data) => {
-  return await fetchData.post(baseUrl, data);
+  return await fetchData.post(commentsUrl, data);
 };
