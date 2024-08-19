@@ -1,8 +1,8 @@
 import * as fetchData from "./fetchData";
-import { url } from "./utils";
+import { baseUrl } from "./utils";
 
 // const baseUrl = "http://localhost:3005";
-const baseUrl = url;
+// const baseUrl = url;
 
 export const getcars = async () => {
   return await fetchData.get(`${baseUrl}/cars`);
