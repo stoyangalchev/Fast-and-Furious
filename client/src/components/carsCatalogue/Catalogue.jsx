@@ -9,6 +9,7 @@ import { scrollToTop } from "../globalComponents/ScrollArrow";
 
 import styles from "./Catalogue.module.css";
 
+import { fetchData } from "../../services/fetchData";
 
 export const Catalogue = () => {
     const { isAuthenticated } = useContext(AuthContext);
