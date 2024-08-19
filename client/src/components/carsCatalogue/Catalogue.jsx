@@ -20,10 +20,14 @@ export const Catalogue = () => {
 
     useEffect(() => {
         console.log("Catalogue.jsx: useEffect");
-        fetch("GET", "https://fast-and-furious-sds3.onrender.com/cars")
+
+        fetch("https://fast-and-furious-sds3.onrender.com/cars", {
+            method: "GET",
+        })
+            .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data)) {
-                    setcars(data);
+                    setCars(data);
                 } else {
                     console.error("Unexpected data format:", data);
                 }
