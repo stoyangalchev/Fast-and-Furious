@@ -13,7 +13,7 @@ export const Catalogue = () => {
     const { isAuthenticated } = useContext(AuthContext);
 
     const [cars, setcars] = useState(null);
-    const [filteredList, setFilteredList] = useState("");
+    const [filteredList, setFilteredList] = useState([]);
     const [searchValue, setSearchValue] = useState(false);
 
     useEffect(() => {
@@ -30,6 +30,7 @@ export const Catalogue = () => {
         const query = e.target.value;
         if (query) {
             setSearchValue(true);
+            filteredList.toArray()
             setFilteredList(cars.filter((item) => item.category === query));
         } else {
             setSearchValue(false);
