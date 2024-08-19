@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as carsService from "../../services/carsService";
-import Car from "./newCar/Car";
+import  Car  from "./newCar/Car";
 import { NewCarButton } from "../../shared/NewCarButton/NewCarButton";
 import { scrollToTop } from "../globalComponents/ScrollArrow";
 
 import styles from "./Catalogue.module.css";
-
-
 
 export const Catalogue = () => {
     const { isAuthenticated } = useContext(AuthContext);
@@ -19,27 +17,11 @@ export const Catalogue = () => {
     const [searchValue, setSearchValue] = useState(false);
 
     useEffect(() => {
-        console.log("Catalogue.jsx: useEffect");
-
-        fetch("https://fast-and-furious-sds3.onrender.com/cars", {
-            method: "GET",
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                if (Array.isArray(data)) {
-                    setcars(data);
-                } else {
-                    console.error("Unexpected data format:", data);
-                }
-            })
-            .catch((error) => console.error("Fetch error:", error));
-
         carsService.getcars()
             .then((cars) => {
                 setcars(cars);
             })
             .catch((err) => {
-                console.error("Fetch error1:", err);
                 throw err;
             });
     }, []);
