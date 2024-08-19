@@ -23,6 +23,7 @@ export const fetchData = async (method, url, data) => {
     if (response.ok) {
       return result;
     } else {
+        console.log(result)
       throw new Error(result);
     }
   } catch (error) {
