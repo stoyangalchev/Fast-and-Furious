@@ -5,6 +5,7 @@ import { baseUrl } from "./utils";
 // const baseUrl = url;
 
 export const getcars = async () => {
+  console.log(baseUrl)
   return await fetchData.get(`${baseUrl}/cars`);
 };
 export const savecar = async (data) => {
