@@ -1,33 +1,28 @@
-import { getAuthToken } from "./getToken";
+import { getAuthToken } from './getToken'
 
 export const fetchData = async (method, url, data) => {
-  try {
     const response = await fetch(url, {
-      method,
-      headers: {
-        "content-type": "application/json",
-        "X-Authorization": getAuthToken(),
-      },
-      body: JSON.stringify(data),
+        method,
+        headers: {
+            'content-type': 'application/json',
+            'X-Authorization': getAuthToken()
+        },
+        body: JSON.stringify(data)
     });
 
-    const contentType = response.headers.get("content-type");
-    let result;
-
-    if (contentType && contentType.includes("application/json")) {
-      result = await response.json();
-    } else {
-      result = await response.text(); // Handle non-JSON responses
-    }
+    const result = await response.json();
 
     if (response.ok) {
-      return result;
+        return result;
     } else {
-        console.log(result)
-      throw new Error(result);
+        throw result;
     }
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
 };
+
+
+
+export const get = fetchData.bind(null, 'GET');
+export const put = fetchData.bind(null, 'PUT');
+export const post = fetchData.bind(null, 'POST');
+export const remove = fetchData.bind(null, 'DELETE');
+export const patch = fetchData.bind(null, 'PATCH');
