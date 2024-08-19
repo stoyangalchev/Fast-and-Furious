@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as carsService from "../../services/carsService";
-import Car from "./newCar/Car";
+import  Car  from "./newCar/Car";
 import { NewCarButton } from "../../shared/NewCarButton/NewCarButton";
 import { scrollToTop } from "../globalComponents/ScrollArrow";
 
@@ -17,13 +17,13 @@ export const Catalogue = () => {
     const [searchValue, setSearchValue] = useState(false);
 
     useEffect(() => {
-        console.log(baseUrl);
+        console.log("Catalogue.jsx: useEffect");
         carsService.getcars()
             .then((cars) => {
                 setcars(cars);
             })
             .catch((err) => {
-                console.error('Error fetching cars:', err);
+                throw err;
             });
     }, []);
 

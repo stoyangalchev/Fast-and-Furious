@@ -5,12 +5,7 @@ import { url } from "./utils";
 const baseUrl = url;
 
 export const getcars = async () => {
-  console.log(baseUrl);
-  const response = await fetch(`${baseUrl}/cars`);
-  if (!response.ok) {
-    throw new Error("Failed to fetch cars");
-  }
-  return response.json();
+  return await fetchData.get(`${baseUrl}/cars`);
 };
 export const savecar = async (data) => {
   return await fetchData.post(`${baseUrl}/cars`, data);

@@ -1,3 +1,4 @@
+require('dotenv').config();
 function createErrorMessage(error) {
     return error.message.includes('Path')
       ? getMissingPropertiesErrorMessage(error?.errors || {})
@@ -19,7 +20,9 @@ function createErrorMessage(error) {
       message = createErrorMessage(error);
       res.status(400).json({ message });
     }
-    console.error(`Error: ${req.method} >> ${req.baseUrl}: ${message}`);
+    console.error(
+      `Error: ${req.method} >> ${process.DB_CONNECTION_STRING}: ${message}`
+    );
   }
   
   function getMissingPropertiesErrorMessage(errors) {
