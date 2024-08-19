@@ -9,14 +9,13 @@ module.exports = (app) => {
   const allowedOrigins = [
     "http://localhost:3000",
     "http://localhost:5173",
-    process.env.TOKEN_SECRET,
-    process.env.DB_CONNECTION_STRING,
+    process.env.REACT_APP_API_URL,
+    
   ];
 
   app.use(
     cors({
       credentials: true,
-      methods: ["GET", "POST", "PUT", "DELETE"], 
       origin: function (origin, callback) {
         if (!origin || allowedOrigins.indexOf(origin) !== -1) {
           callback(null, true);
