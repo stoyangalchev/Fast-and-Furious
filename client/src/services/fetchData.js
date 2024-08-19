@@ -10,7 +10,7 @@ export const fetchData = async (method, url, data) => {
         body: JSON.stringify(data)
     });
 
-    const result = await response.json();
+    const result = await response.json().catch(() => response.text());
 
     if (response.ok) {
         return result;
