@@ -27,7 +27,7 @@ export const Catalogue = () => {
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data)) {
-                    setCars(data);
+                    setcars(data);
                 } else {
                     console.error("Unexpected data format:", data);
                 }
