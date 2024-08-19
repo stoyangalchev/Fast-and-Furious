@@ -1,24 +1,40 @@
 import { getAuthToken } from './getToken'
 
 export const fetchData = async (method, url, data) => {
-    const response = await fetch(url, {
-        method,
-        headers: {
-            'content-type': 'application/json',
-            'X-Authorization': getAuthToken()
-        },
-        body: JSON.stringify(data)
-    });
+  try {
+    const options = {
+      method,
+      headers: {
+        "content-type": "application/json",
+        "X-Authorization": getAuthToken(),
+      },
+    };
 
-    const result = await response.json();
+    if (data && (method === "POST" || method === "PUT")) {
+      options.body = JSON.stringify(data);
+    }
+
+    const response = await fetch(url, options);
+
+    // Check if the response is JSON
+    const contentType = response.headers.get("content-type");
+    let result;
+    if (contentType && contentType.includes("application/json")) {
+      result = await response.json();
+    } else {
+      result = await response.text();
+    }
 
     if (response.ok) {
-        return result;
+      return result;
     } else {
-        throw result;
+      throw new Error(result);
     }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
 };
-
 
 
 export const get = fetchData.bind(null, 'GET');
