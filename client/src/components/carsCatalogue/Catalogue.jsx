@@ -17,6 +17,7 @@ export const Catalogue = () => {
     const [searchValue, setSearchValue] = useState(false);
 
     useEffect(() => {
+        console.log("Catalogue.jsx: useEffect");
         carsService.getcars()
             .then((cars) => {
                 setcars(cars);
