@@ -6,7 +6,7 @@ export const getAuthToken = () => {
 
   }
   catch (error) {
-
+console.error("Get Auth Token error", error);
     return error;
 
   }
