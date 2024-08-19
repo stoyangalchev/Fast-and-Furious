@@ -30,7 +30,7 @@ export const Catalogue = () => {
         const query = e.target.value;
         if (query) {
             setSearchValue(true);
-            filteredList.toArray()
+            
             setFilteredList(cars.filter((item) => item.category === query));
         } else {
             setSearchValue(false);
