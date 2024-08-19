@@ -9,7 +9,7 @@ module.exports = (app) => {
   const allowedOrigins = [
     "http://localhost:3000",
     "http://localhost:5173",
-    process.env.REACT_APP_API_URL,
+    process.env.VITE_PROD_BASE_URL,
   ];
 
   app.use(
