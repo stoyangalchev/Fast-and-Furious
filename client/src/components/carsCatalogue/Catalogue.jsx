@@ -19,7 +19,7 @@ export const Catalogue = () => {
     useEffect(() => {
         carsService.getcars()
             .then((cars) => {
-                setcars(cars);
+                setcars(cars).json();
             })
             .catch((err) => {
                 throw err;
