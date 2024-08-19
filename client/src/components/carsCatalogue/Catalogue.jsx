@@ -21,7 +21,13 @@ export const Catalogue = () => {
     useEffect(() => {
         console.log("Catalogue.jsx: useEffect");
         fetch("GET", "https://fast-and-furious-sds3.onrender.com/cars")
-            .then((data) => console.log(data))
+            .then((data) => {
+                if (Array.isArray(data)) {
+                    setcars(data);
+                } else {
+                    console.error("Unexpected data format:", data);
+                }
+            })
             .catch((error) => console.error("Fetch error:", error));
 
         carsService.getcars()
