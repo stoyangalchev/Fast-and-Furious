@@ -7,7 +7,7 @@ export const fetchData = async (method, url, data) => {
       "content-type": "application/json",
       "X-Authorization": getAuthToken(),
     },
-    body: JSON.stringify(data),
+    body: method !== "GET" ? JSON.stringify(data) : undefined,
   });
 
   const contentType = response.headers.get("content-type");
