@@ -39,6 +39,7 @@ export const Catalogue = () => {
                 setcars(cars);
             })
             .catch((err) => {
+                console.error("Fetch error1:", err);
                 throw err;
             });
     }, []);
