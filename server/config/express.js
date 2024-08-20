@@ -10,6 +10,7 @@ module.exports = (app) => {
     "http://localhost:3000",
     "http://localhost:5173",
     process.env.VITE_PROD_BASE_URL,
+    "https://fast-and-furious-sds3.onrender.com",
   ];
 
   app.use(
