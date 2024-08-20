@@ -9,7 +9,7 @@ module.exports = (app) => {
   const allowedOrigins = [
     "http://localhost:3000",
     "http://localhost:5173",
-    process.env.VITE_PROD_BASE_URL,
+    process.env.DB_CONNECTION_STRING,
     "https://fast-and-furious-sds3.onrender.com",
   ];
 
