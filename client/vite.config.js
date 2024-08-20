@@ -7,5 +7,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     hmr: true,
-  }
+  },
+  build: {
+    outDir: "build", 
+  },
 });
