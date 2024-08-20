@@ -1,13 +1,15 @@
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import React from "react";
+import React ,{Suspense,lazy}from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as carsService from "../../services/carsService";
-import  Car  from "./newCar/Car";
+
 import { NewCarButton } from "../../shared/NewCarButton/NewCarButton";
 import { scrollToTop } from "../globalComponents/ScrollArrow";
 
 import styles from "./Catalogue.module.css";
+
+const Car = lazy(() => import('./newCar/Car'));
 
 export const Catalogue = () => {
     const { isAuthenticated } = useContext(AuthContext);
@@ -126,8 +128,11 @@ export const Catalogue = () => {
                         </p>
                     )}
 
-                    {filteredList.length > 0 &&
-                        filteredList.map((c) => <Car key={c._id} car={c} />)}
+                    <Suspense fallback={<div>Loading...</div>}>
+                        {filteredList.map((c) => (
+                            <Car key={c._id} car={c} />
+                        ))}
+                    </Suspense>
 
                 </div>
             </section>
