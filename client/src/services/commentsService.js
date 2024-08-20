@@ -1,8 +1,9 @@
 import * as fetchData from "./fetchData";
-import { baseUrl } from "./utils";
 
+
+const baseUrl = import.meta.env.VITE_PROD_BASE_URL;;
 // const baseUrl = 'http://localhost:3005';
-// const baseUrl = url;
+
 
 export const getComments = async () => {
   return await fetchData.get(`${baseUrl}/comments`);

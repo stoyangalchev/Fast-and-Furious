@@ -1,8 +1,9 @@
 import * as fetchData from "./fetchData";
-import { baseUrl } from "./utils";
 
-// const baseUrl = "http://localhost:3005";
-// const baseUrl = url;
+
+const baseUrl = import.meta.env.VITE_PROD_BASE_URL;;
+//  const baseUrl = "http://localhost:3005";
+
 
 export const register = async (data) => {
   return await fetchData.post(`${baseUrl}/auth/register`, data);

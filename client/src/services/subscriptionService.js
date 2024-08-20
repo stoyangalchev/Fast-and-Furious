@@ -1,9 +1,10 @@
 import * as fetchData from "./fetchData";
-import { baseUrl } from "./utils";
 
+
+const baseUrl = import.meta.env.VITE_PROD_BASE_URL;;
 // const baseUrl = "http://localhost:3005";
 
-// const baseUrl = url;
+
 
 export const saveSubscription = async (data) => {
   return await fetchData.post(`${baseUrl}/subscribe`, data);
