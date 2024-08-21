@@ -33,7 +33,7 @@ export const Team = () => {
 
                         <div className={styles.detailsContainer}>
                             <div className={styles.detailsWrapper}>
-                                <h4 className={styles.crewName}>Dominic Toretto</h4>
+                                <h4 className={styles.crewName}>Dom Toretto</h4>
                                 <span>Alfa</span>
                             </div>
                         </div>

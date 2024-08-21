@@ -89,7 +89,7 @@
   letter-spacing: 4px;
   font-weight: 700;
   text-transform: uppercase;
- 
+
   transition-property: box-shadow;
   cursor: pointer;
 }
@@ -159,7 +159,7 @@
   text-transform: uppercase;
   transition: 0s;
   transition-property: box-shadow;
- 
+
 }
 
 .shadow__btn_special_username {
@@ -364,6 +364,7 @@ strong {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
+
 @media (max-width: 1200px) {
   .container {
     padding-left: 1rem;
@@ -404,6 +405,7 @@ strong {
     width: 100%;
     height: auto;
     padding: 1rem;
+    margin-bottom: 15px;
   }
 
   #container-stars {
@@ -431,6 +433,7 @@ strong {
     margin: 0 auto;
   }
 }
+
 @media (max-width: 768px) {
   .container {
     padding-left: 1rem;
@@ -471,6 +474,7 @@ strong {
     width: 100%;
     height: auto;
     padding: 1rem;
+    margin-bottom: 15px;
   }
 
   #container-stars {
@@ -539,6 +543,7 @@ strong {
     width: 100%;
     height: auto;
     padding: 0.75rem;
+    margin-bottom: 15px;
   }
 
   #container-stars {
@@ -607,6 +612,7 @@ strong {
     width: 100%;
     height: auto;
     padding: 0.5rem;
+    margin-bottom: 15px;
   }
 
   #container-stars {

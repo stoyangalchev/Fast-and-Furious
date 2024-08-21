@@ -113,21 +113,25 @@ body {
 }
 
 .detailsWrapper {
-    background-color: #f1f1f1;
+    background-color: #0064cf;
     padding: 1rem;
     border-radius: 8px;
     font-size: 1rem;
-    color: #333;
+    color: #ffffff;
+
+    background-image: linear-gradient(to right, rgba(0, 20, 170, 0.5), rgba(11, 23, 133, 0.2), rgba(86, 86, 255, 0.5));
+    animation: shine 2s infinite;
+    border: 2px solid #2b2561;
 }
 
 .crewName {
     text-transform: uppercase;
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: calc(1.275rem + 0.2vw);
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
-    color: #333;
+    color: #ffffff;
 }
 
 .fastfive {
@@ -193,21 +197,22 @@ body {
         border-width: 5px;
         border-radius: 20px;
     }
-        .img {
-            object-fit: cover;
-            object-position: top;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            vertical-align: top;
-        }
-    
-        .imgWrapper {
-            height: 100%;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
+
+    .img {
+        object-fit: cover;
+        object-position: top;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        vertical-align: top;
+    }
+
+    .imgWrapper {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 400px) {
@@ -258,39 +263,39 @@ body {
         border-radius: 15px;
     }
 
-        .img {
-            object-fit: cover;
-            object-position: top;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            vertical-align: top;
-        }
-    
-        .imgWrapper {
-            height: 100%;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
+    .img {
+        object-fit: cover;
+        object-position: top;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        vertical-align: top;
+    }
+
+    .imgWrapper {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 300px) {
     .img {
-            object-fit: cover;
-            object-position: top;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            vertical-align: top;
-        }
-    
-        .imgWrapper {
-            height: 100%;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
+        object-fit: cover;
+        object-position: top;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        vertical-align: top;
+    }
+
+    .imgWrapper {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
 
     .container {
         padding: 0.25rem;

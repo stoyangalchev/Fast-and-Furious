@@ -32,11 +32,11 @@ export const likecar = async (carId, data) => {
 
 export const getMycars = async (ownerId) => {
   const allcars = await fetchData.get(`${baseUrl}/cars`);
-  const mycars = allcars.filter((g) => g.owner === ownerId);
+  const mycars = allcars.filter((c) => c.owner === ownerId);
   return mycars;
 };
 export const getMyLikedcars = async (userId) => {
   const allcars = await fetchData.get(`${baseUrl}/cars`);
-  const likedcars = allcars.filter((g) => g.likedBy.includes(userId));
+  const likedcars = allcars.filter((c) => c.likedBy.includes(userId));
   return likedcars;
 };

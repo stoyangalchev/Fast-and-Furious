@@ -104,7 +104,8 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #777;
+  font-weight: bold;
+  color: #040101;
   border: 3px solid #010101;
   background-color: var(--input-bg-color);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
