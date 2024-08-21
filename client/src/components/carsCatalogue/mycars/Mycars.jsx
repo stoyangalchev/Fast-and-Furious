@@ -1,7 +1,6 @@
 import { lazy, useEffect, useState } from "react";
-
 import { NewCarButton } from "../../../shared/NewCarButton/NewCarButton"
-import React, { useContext } from "react";
+import React, { useContext, Suspense } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 
@@ -47,9 +46,11 @@ export const Mycars = () => {
           )}
         </div>
         <div className={styles.carsSection}>
-          {cars?.map((c) => (
-            <Car key={c._id} car={c} />
-          ))}
+          <Suspense fallback={<div>Loading...</div>}>
+            {cars?.map((c) => (
+              <Car key={c._id} car={c} />
+            ))}
+          </Suspense>
         </div>
       </section>
     </>
