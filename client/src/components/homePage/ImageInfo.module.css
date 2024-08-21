@@ -8,6 +8,7 @@
 
 .imageContainer {
     position: relative;
+    width: 100%;
 }
 
 .img {
@@ -33,7 +34,7 @@
 }
 
 .textContainer {
-    max-width: 900px;
+    font-size: 20px;
     padding: 1rem;
 }
 
@@ -70,13 +71,14 @@
     border-radius: 0.65rem;
     clear: both;
 }
-.btn:hover{
-    
+
+.btn:hover {
+
     color: #001c44;
-        box-shadow: 0 0 1px rgb(206, 207, 208),
-            0 0 25px rgb(132, 176, 212),
-            0 0 50px rgb(84, 147, 198),
-            0 0 100px rgb(195, 196, 198);
+    box-shadow: 0 0 1px rgb(206, 207, 208),
+        0 0 25px rgb(132, 176, 212),
+        0 0 50px rgb(84, 147, 198),
+        0 0 100px rgb(195, 196, 198);
 
 }
 
@@ -100,6 +102,10 @@
         padding-bottom: 1rem;
     }
 
+    .container {
+        width: 100%;
+    }
+
     .icon {
         font-size: 8em;
     }
@@ -118,6 +124,16 @@
     .heading {
         font-size: 2rem;
     }
+
+    .textContainer {
+        padding: 0.5rem;
+        font-size: 20px;
+        height: 20%;
+    }
+
+    .title {
+        font-size: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -125,6 +141,10 @@
         right: 5%;
         left: 5%;
         padding-bottom: 0.75rem;
+    }
+
+    .container {
+        width: 100%;
     }
 
     .icon {
@@ -140,5 +160,45 @@
 
     .heading {
         font-size: 1.5rem;
+    }
+
+    .textContainer {
+        padding: 0.5rem;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 300px) {
+    .overlayInfo {
+        right: 3%;
+        left: 3%;
+        padding-bottom: 0.5rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: auto;
+    }
+
+    .icon {
+        font-size: 4em;
+            padding: auto;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 3% auto;
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .heading {
+        font-size: 1rem;
+            padding: auto;
+    }
+
+    .textContainer {
+        padding: auto;
+        font-size: 16px;
     }
 }

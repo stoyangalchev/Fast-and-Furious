@@ -10,7 +10,7 @@ export const ImageInfo = () => {
                     <div className={styles.textContainer}>
                         <i className={`fab fa-react ${styles.icon}`}></i>
                         <Link to="/cars" className={styles.heading}>
-                            <h1 >Chose your Reactive car</h1>
+                            <h1 className="title" >Chose your Reactive car</h1>
                         </Link>
                         
                     </div>

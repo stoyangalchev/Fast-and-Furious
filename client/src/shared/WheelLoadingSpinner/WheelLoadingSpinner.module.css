@@ -37,3 +37,57 @@ h1 {
     color: rgb(255, 255, 255);
     text-shadow: 0 0 2px #f3f3f3, 0 0 5px #f3f3f3, 0 0 50px #f3f3f3, 0 0 20px #006eff;
 }
+
+/* Media query for screens up to 1200px */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 45px;
+        margin-top: 18px;
+        text-shadow: 0 0 2px #f3f3f3, 0 0 4px #f3f3f3, 0 0 40px #f3f3f3, 0 0 18px #006eff;
+    }
+}
+
+/* Media query for screens up to 900px */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 40px;
+        margin-top: 16px;
+        text-shadow: 0 0 1.5px #f3f3f3, 0 0 3.5px #f3f3f3, 0 0 35px #f3f3f3, 0 0 15px #006eff;
+    }
+}
+
+/* Media query for screens up to 600px */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 35px;
+        margin-top: 14px;
+        text-shadow: 0 0 1.5px #f3f3f3, 0 0 3px #f3f3f3, 0 0 30px #f3f3f3, 0 0 12px #006eff;
+    }
+}
+
+/* Media query for screens up to 400px */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 30px;
+        margin-top: 12px;
+        text-shadow: 0 0 1px #f3f3f3, 0 0 2.5px #f3f3f3, 0 0 25px #f3f3f3, 0 0 10px #006eff;
+    }
+}
+
+/* Media query for screens up to 300px */
+@media (max-width: 300px) {
+    h1 {
+        font-size: 25px;
+        margin-top: 10px;
+        text-shadow: 0 0 1px #f3f3f3, 0 0 2px #f3f3f3, 0 0 20px #f3f3f3, 0 0 8px #006eff;
+    }
+}
+
+/* Media query for screens up to 200px */
+@media (max-width: 200px) {
+    h1 {
+        font-size: 20px;
+        margin-top: 8px;
+        text-shadow: 0 0 0.5px #f3f3f3, 0 0 1.5px #f3f3f3, 0 0 15px #f3f3f3, 0 0 5px #006eff;
+    }
+}

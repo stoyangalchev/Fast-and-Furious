@@ -155,7 +155,7 @@
 
 @media (max-width: 900px) {
   .containerHeader {
-    height: 500px;
+    height: 700px;
   }
 
   .sectionTitle {
@@ -177,18 +177,18 @@
 
 @media (max-width: 600px) {
   .containerHeader {
-    height: 400px;
-    padding: 1rem;
+    height: 700px;
+   
   }
 
   .sectionTitle {
     font-size: 2rem;
-    margin-top: 20px;
+ 
   }
 
   .containerContent {
     width: 100%;
-    padding: 1rem;
+  
   }
 
   .browsecarsHeader {
@@ -225,8 +225,8 @@
 
 @media (max-width: 400px) {
   .containerHeader {
-    height: 350px;
-    padding: 0.8rem;
+    height: 500px;
+  padding: 0.6rem;
   }
 
   .sectionTitle {
@@ -271,7 +271,7 @@
 
 @media (max-width: 290px) {
   .containerHeader {
-    height: 300px;
+    height: 100px;
     padding: 0.6rem;
   }
 
