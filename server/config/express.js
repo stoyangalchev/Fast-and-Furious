@@ -14,5 +14,9 @@ module.exports = (app) => {
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     })
   );
+
+  // Handle preflight OPTIONS requests
+  app.options("*", cors());
+
   app.use(express.json());
 };
