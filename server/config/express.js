@@ -6,24 +6,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 module.exports = (app) => {
-  const allowedOrigins = [
-    "http://localhost:3000",
-    "http://localhost:5173",
-    process.env.DB_CONNECTION_STRING,
-    "https://fast-and-furious-sds3.onrender.com",
-  ];
-
   app.use(
     cors({
       credentials: true,
-      origin: function (origin, callback) {
-        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-          callback(null, true);
-        } else {
-          callback(new Error("CORS policy violation"));
-        }
-      },
+      origin: "*", // Allow all origins for testing purposes
       allowedHeaders: ["Content-Type", "X-Authorization"],
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     })
   );
   app.use(express.json());
