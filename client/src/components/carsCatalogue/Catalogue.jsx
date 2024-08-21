@@ -21,11 +21,7 @@ export const Catalogue = () => {
     useEffect(() => {
         carsService.getcars()
             .then((cars) => {
-                if (Array.isArray(cars)) {
-                    setcars(cars);
-                } else {
-                    console.error("Expected an array but got:", cars);
-                }
+                setcars(cars);
             })
             .catch((err) => {
                 throw err;
