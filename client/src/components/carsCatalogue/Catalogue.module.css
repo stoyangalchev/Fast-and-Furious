@@ -177,56 +177,30 @@
 
 @media (max-width: 600px) {
   .containerHeader {
-    height: 700px;
-   
-  }
-
-  .sectionTitle {
-    font-size: 2rem;
- 
-  }
-
-  .containerContent {
-    width: 100%;
+      height: 700px;
+    }
   
-  }
-
-  .browsecarsHeader {
-    max-width: 100%;
-    margin: 1rem 0;
-  }
-
-  .browsecarsHeading {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .carsSection {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .select {
-    width: 100%;
-    padding: 0.5rem 1rem;
-  }
-
-  .findcarsHeading {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .nocars {
-    font-size: 1.5rem;
-  }
+    .sectionTitle {
+      font-size: 4rem;
+    }
+  
+    .containerContent {
+      width: 95%;
+    }
+  
+    .browsecarsHeading {
+      font-size: 2rem;
+    }
+  
+    .select {
+      width: 20rem;
+    }
 }
-
-
 
 @media (max-width: 400px) {
   .containerHeader {
     height: 500px;
-  padding: 0.6rem;
+
   }
 
   .sectionTitle {
@@ -236,7 +210,7 @@
 
   .containerContent {
     width: 100%;
-    padding: 0.8rem;
+
   }
 
   .browsecarsHeader {
@@ -272,7 +246,7 @@
 @media (max-width: 290px) {
   .containerHeader {
     height: 100px;
-    padding: 0.6rem;
+
   }
 
   .sectionTitle {
@@ -281,7 +255,7 @@
   }
 
   .containerContent {
-    width: 100%;
+    width: 90%;
     padding: 0.6rem;
   }
 
