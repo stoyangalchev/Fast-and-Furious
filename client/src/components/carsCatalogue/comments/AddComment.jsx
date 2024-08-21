@@ -63,7 +63,7 @@ export const AddComment = () => {
         <div className={styles.container}>
             <div className={styles.contentWrapper}>
                 <div className={styles.col1}>
-                    <h1 className={styles.heading}>Add new <span className={styles.highlight}>Comment</span> to the {car}</h1>
+                    <h1 className={styles.heading}>Add new Commentto the <span className={styles.highlight}>{car}</span> </h1>
                     <p className={styles.paragraph}>We are happy to hear from you. <i className="far fa-smile-beam"></i></p>
                 </div>
                 <div className={styles.col2}>
