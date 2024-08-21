@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 module.exports = (app) => {
+  // CORS configuration
   app.use(
     cors({
       credentials: true,
@@ -18,5 +19,11 @@ module.exports = (app) => {
   // Handle preflight OPTIONS requests
   app.options("*", cors());
 
+  // Middleware to parse JSON bodies
   app.use(express.json());
+
+  // Example route to test CORS
+  app.get("/cars", (req, res) => {
+    res.json({ message: "CORS is working!" });
+  });
 };
