@@ -1,4 +1,3 @@
-
 # Fast and Furious 🚗💨
 
 **Fast and Furious** is a sleek web application built with React and Vite. It's designed for car enthusiasts who want to explore, contribute, and engage with a vibrant community of vehicle lovers. From adding your favorite rides to commenting and liking, this app brings your automotive passions to life!
@@ -7,6 +6,9 @@
 
 ![App Screenshot](./screenshots/Home%20Page(User).png)
 
+# Deployed App 🌍 --- (click here)-> "https://fast-and-furious-sigma.vercel.app"  
+- ** Client deployed to Vercel
+- ** Server deployed to MongoDB Atlas
 ## 🚀 Features
 
 - **User Authentication**: Seamlessly register and log in to access all features.
