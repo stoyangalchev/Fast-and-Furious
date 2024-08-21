@@ -1,3 +1,4 @@
+/* Default styles */
 .container {
   padding-right: 3rem;
   padding-left: 3rem;
@@ -61,7 +62,6 @@
 }
 
 .inputAuthor {
-
   width: 100%;
   color: #080000;
   background-color: #30d403;
@@ -115,13 +115,12 @@
 .errors {
   color: #ff0000;
   margin-top: 0;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 .maxWidthWrapper {
   flex: 0 0 auto;
   width: 100%;
-
 }
 
 .btn {
@@ -145,29 +144,181 @@
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   position: relative;
   text-transform: uppercase;
-
   border-radius: 0;
   height: 3rem;
   font-size: 20px;
   font-weight: 700;
-
 }
 
 .btn:hover {
   color: #ffffff;
 }
 
-@media (min-width: 600px) {
-  .col1 {
-    width: 33.33333%;
+/* Responsive styles */
+
+/* For screens larger than 1200px */
+@media (max-width: 1200px) {
+  .container {
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 
-
-  .col2 {
-    flex: 0 0 auto;
-    width: 66.66667%;
+  .heading {
+    font-size: 2.5rem;
   }
 
+  .paragraph {
+    font-size: 25px;
+  }
 
-
+  .btn {
+    font-size: 18px;
+  }
 }
+
+/* For screens larger than 900px */
+@media (max-width: 900px) {
+  .container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .col1 {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+}
+
+/* For screens larger than 700px */
+@media (max-width: 700px) {
+  .container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+/* For screens larger than 600px */
+@media (max-width: 600px) {
+  .container {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .paragraph {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+}
+
+/* For screens larger than 300px */
+@media (max-width: 300px) {
+  .container {
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 10px;
+  }
+}
+
+/* For screens larger than 200px */
+@media (max-width: 200px) {
+  .container {
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .paragraph {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 8px;
+  }
+}
+
+/* Additional responsive styles for better UX */
+
+/* For landscape orientation */
+@media (orientation: landscape) {
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+/* For high-resolution screens */
+@media (min-resolution: 2dppx) {
+  .container {
+    padding: 2rem;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .paragraph {
+    font-size: 25px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}
+
+/* For dark mode */
