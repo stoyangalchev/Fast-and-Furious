@@ -220,3 +220,99 @@
     font-size: 1.5rem;
   }
 }
+
+
+
+@media (max-width: 400px) {
+  .containerHeader {
+    height: 350px;
+    padding: 0.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-top: 15px;
+  }
+
+  .containerContent {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .browsecarsHeader {
+    max-width: 100%;
+    margin: 0.8rem 0;
+  }
+
+  .browsecarsHeading {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .carsSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .select {
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .findcarsHeading {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .nocars {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 290px) {
+  .containerHeader {
+    height: 300px;
+    padding: 0.6rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .containerContent {
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .browsecarsHeader {
+    max-width: 100%;
+    margin: 0.6rem 0;
+  }
+
+  .browsecarsHeading {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .carsSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .select {
+    width: 100%;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .findcarsHeading {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .nocars {
+    font-size: 1.2rem;
+  }
+}
+
+
