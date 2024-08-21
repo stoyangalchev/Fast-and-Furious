@@ -11,7 +11,7 @@ module.exports = (app) => {
       credentials: true,
       origin: "*", // Allow all origins for testing purposes
       allowedHeaders: ["Content-Type", "X-Authorization"],
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     })
   );
 
