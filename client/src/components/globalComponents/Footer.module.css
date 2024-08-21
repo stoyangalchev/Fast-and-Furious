@@ -372,6 +372,11 @@
   .footerEndDisclaimer {
     padding: 0.5rem 1rem 0.5rem 1rem;
   }
+  .socialMediaContainer {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+  }
 
   .footerEndShape {
     border-bottom: 40px solid #008cff;

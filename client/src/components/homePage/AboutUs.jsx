@@ -57,6 +57,8 @@ export const AboutUs = () => {
                             src="img/fast-and-furious-6_letty-Jenson-Interceptor.avif"
                             alt="Letty"
                         />
+                        
+
                     </div>
                 </div>
             </div>

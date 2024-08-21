@@ -43,6 +43,7 @@
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     line-height: 1.2;
+    text-align: center;
 }
 
 .paragraph {
@@ -93,40 +94,58 @@
 
 .img {
     object-fit: contain;
-    margin-left: -3rem;
-    margin-top: 3rem;
-    height: 100%;
     width: 100%;
-    position: absolute;
+    /* Ensure the image fits within the container width */
+    height: auto;
+    /* Maintain the aspect ratio */
+    position: relative;
     vertical-align: middle;
+    margin-left: 0;
+    margin-top: 0;
 }
 
 @media (max-width: 1200px) {
-    .header {
-        font-size: 2.5rem;
+    .container {
+        padding: 2.5rem;
     }
 
-    .paragraph {
-        font-size: 1.75rem;
-        padding: 0 1rem;
-        width: 80%;
+    .header {
+        font-size: 2rem;
+        margin-top: 20%;
+    }
+
+    .header2 {
+        font-size: 1.5rem;
+        width: 60%;
+        padding: 1rem;
         margin: 0 auto;
     }
 
+    .paragraph {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 70%;
+        padding: 0 1rem;
+    }
+
     .imageWrapper {
-        width: 50%;
+        width: 100%;
+    }
+
+    .img {
+        margin-left: 0;
+        margin-top: 0;
     }
 
     .item1 {
         width: 50%;
         padding: 2rem;
+        text-align: center;
     }
 
-    .header2 {
-        font-size: 1.3rem;
-        width: 70%;
-        padding: 1rem;
-        margin: 0 auto;
+    .imgBg {
+        margin-left: 0;
     }
 }
 
@@ -167,6 +186,11 @@
     .item1 {
         width: 50%;
         padding: 2rem;
+        text-align: center;
+    }
+
+    .imgBg {
+        margin-left: 0;
     }
 }
 
@@ -205,6 +229,11 @@
     .item1 {
         width: 50%;
         padding: 2rem;
+        text-align: center;
+    }
+
+    .imgBg {
+        margin-left: 0;
     }
 }
 
@@ -246,5 +275,9 @@
         width: 60%;
         padding: 1rem;
         margin: 0 auto;
+    }
+
+    .imgBg {
+        margin-left: 0;
     }
 }

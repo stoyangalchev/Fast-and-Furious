@@ -1,18 +1,14 @@
 .containerHeader {
-  width: 100%;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
-  margin-right: auto;
-  margin-left: auto;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: linear-gradient(rgba(4, 15, 40, 0.7), rgba(4, 15, 40, 0.7)),
     url(/img/need4speed.jpg) center center no-repeat;
   background-size: cover;
+  width: calc(100% + 2rem);
+  height: 60vh;
+  overflow: visible;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  position: relative;
 }
-
 .sectionTitle {
   color: #fff;
   text-transform: uppercase;
@@ -45,7 +41,7 @@
 
 .containerContent {
   padding: 1rem 3rem 1rem 3rem;
-  width: 80%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -130,18 +126,13 @@
   width: 100%;
 }
 
-/* Media Queries */
 @media (max-width: 1200px) {
   .containerHeader {
-    height: 600px;
+  height: 58vh;
   }
 
   .sectionTitle {
     font-size: 6rem;
-  }
-
-  .containerContent {
-    width: 90%;
   }
 
   .browsecarsHeading {
@@ -155,15 +146,11 @@
 
 @media (max-width: 900px) {
   .containerHeader {
-    height: 700px;
+  height: 48vh;
   }
 
   .sectionTitle {
     font-size: 4rem;
-  }
-
-  .containerContent {
-    width: 95%;
   }
 
   .browsecarsHeading {
@@ -177,40 +164,30 @@
 
 @media (max-width: 600px) {
   .containerHeader {
-      height: 700px;
-    }
-  
-    .sectionTitle {
-      font-size: 4rem;
-    }
-  
-    .containerContent {
-      width: 95%;
-    }
-  
-    .browsecarsHeading {
-      font-size: 2rem;
-    }
-  
-    .select {
-      width: 20rem;
-    }
+  height: 39vh;
+  }
+
+  .sectionTitle {
+    font-size: 4rem;
+  }
+
+  .browsecarsHeading {
+    font-size: 2rem;
+  }
+
+  .select {
+    width: 20rem;
+  }
 }
 
 @media (max-width: 400px) {
   .containerHeader {
-    height: 500px;
-
+  height: 29vh;
   }
 
   .sectionTitle {
     font-size: 1.8rem;
     margin-top: 15px;
-  }
-
-  .containerContent {
-    width: 100%;
-
   }
 
   .browsecarsHeader {
@@ -245,18 +222,12 @@
 
 @media (max-width: 290px) {
   .containerHeader {
-    height: 100px;
-
+    height: 30vh;
   }
 
   .sectionTitle {
     font-size: 1.5rem;
     margin-top: 10px;
-  }
-
-  .containerContent {
-    width: 90%;
-    padding: 0.6rem;
   }
 
   .browsecarsHeader {
@@ -288,5 +259,3 @@
     font-size: 1.2rem;
   }
 }
-
-

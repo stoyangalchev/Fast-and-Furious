@@ -1,20 +1,24 @@
-.container {
-    padding-right: 3rem;
-    padding-left: 3rem;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 10px;
-    padding-bottom: 90px;
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f8f9fa;
 
+
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header {
     max-width: 600px;
     text-align: center;
-    margin-bottom: 3rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto 3rem auto;
 }
 
 .heading {
@@ -22,21 +26,15 @@
     margin-bottom: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
-    font-family: "Roboto", sans-serif;
     font-size: calc(1.375rem + 1.5vw);
-    color: #e1e1e1;
-}
-
-@media (min-width: 1200px) {
-    .heading {
-        font-size: 2.5rem;
-    }
+    color: #333;
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .highlight {
@@ -44,35 +42,36 @@
 }
 
 .card {
-    flex: 0 0 auto;
-    width: 25%;
+    flex: 1 1 calc(25% - 1rem);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-@media (max-width: 992px) {
-    .card {
-        width: 33.33333%;
-    }
-}
-
-@media (max-width: 768px) {
-    .card {
-        width: 50%;
-    }
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .item {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 300px;
-    flex: 0 0 auto;
-    width: 83.33333%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .imgWrapper {
     height: 100%;
+    width: 100%;
     position: relative;
 }
 
@@ -82,43 +81,43 @@
     width: 100%;
     position: absolute;
     vertical-align: middle;
-
 }
-
-
-
 
 .btn {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
-    color: #777;
+    color: #fff;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    background-color: transparent;
+    background-color: #007bff;
     border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
-    border-radius: 0;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    position: relative;
+    border-radius: 0.25rem;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     text-transform: uppercase;
     text-decoration: none;
 }
 
+.btn:hover {
+    background-color: #0056b3;
+}
+
 .detailsContainer {
-    flex: 0 0 auto;
-    width: 100%;
-    color: #bbbbbb;
+    flex: 1 1 100%;
+    color: #555;
+    padding: 1rem;
 }
 
 .detailsWrapper {
-    background-color: #7771e1, transparent;
-    font-size: 20px;
-    color: aliceblue;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
 }
 
 .crewName {
@@ -126,27 +125,220 @@
     font-size: calc(1.275rem + 0.3vw);
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-family: "Roboto", sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    color: #e3e4e6;
-
-
-}
-
-@media (min-width: 1200px) {
-    .employeeName {
-        font-size: 1.5rem;
-    }
+    color: #333;
 }
 
 .fastfive {
+    display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
     height: 100%;
     border-radius: 40px;
-    border-width: 10px;
-    border: solid 10px black;
+    border: 10px solid black;
+}
 
+/* Complex media query for mobile */
+@media (max-width: 576px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+
+    .imgContainer {
+        min-height: 200px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .detailsContainer {
+        padding: 0.5rem;
+    }
+
+    .detailsWrapper {
+        font-size: 0.875rem;
+    }
+
+    .crewName {
+        font-size: 1.25rem;
+    }
+
+    .fastfive {
+        border-width: 5px;
+        border-radius: 20px;
+    }
+        .img {
+            object-fit: cover;
+            object-position: top;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            vertical-align: top;
+        }
+    
+        .imgWrapper {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .header {
+        margin-bottom: 1.5rem;
+    }
+
+    .heading {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .gallery {
+        gap: 0.25rem;
+    }
+
+    .card {
+        margin-bottom: 0.75rem;
+    }
+
+    .imgContainer {
+        min-height: 150px;
+    }
+
+    .btn {
+        padding: 0.375rem;
+        font-size: 0.75rem;
+    }
+
+    .detailsContainer {
+        padding: 0.25rem;
+    }
+
+    .detailsWrapper {
+        font-size: 0.75rem;
+    }
+
+    .crewName {
+        font-size: 1rem;
+    }
+
+    .fastfive {
+        border-width: 4px;
+        border-radius: 15px;
+    }
+
+        .img {
+            object-fit: cover;
+            object-position: top;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            vertical-align: top;
+        }
+    
+        .imgWrapper {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+}
+
+@media (max-width: 300px) {
+    .img {
+            object-fit: cover;
+            object-position: top;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            vertical-align: top;
+        }
+    
+        .imgWrapper {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+    .container {
+        padding: 0.25rem;
+    }
+
+    .header {
+        margin-bottom: 1rem;
+    }
+
+    .heading {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .gallery {
+        gap: 0.125rem;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .imgContainer {
+        min-height: 100px;
+    }
+
+    .btn {
+        padding: 0.25rem;
+        font-size: 0.625rem;
+    }
+
+    .detailsContainer {
+        padding: 0.125rem;
+    }
+
+    .detailsWrapper {
+        font-size: 0.625rem;
+    }
+
+    .crewName {
+        font-size: 0.875rem;
+    }
+
+    .fastfive {
+        border-width: 3px;
+        border-radius: 10px;
+    }
 }

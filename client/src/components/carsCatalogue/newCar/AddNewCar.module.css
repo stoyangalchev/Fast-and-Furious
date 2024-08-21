@@ -6,15 +6,12 @@
   margin-left: auto;
   padding-top: 90px;
   padding-bottom: 90px;
-
 }
 
 .contentWrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
-
 }
 
 .col1 {
@@ -33,10 +30,7 @@
   font-family: "Roboto", sans-serif;
   color: #ffffff;
   text-shadow: 10px 5px 1px rgba(0, 0, 0, 0.5);
-
   animation: fadeIn 1s;
-
-
 }
 
 @keyframes fadeIn {
@@ -51,7 +45,6 @@
 
 .highlight {
   color: #008cff;
-
 }
 
 .paragraph {
@@ -78,16 +71,12 @@
   font-weight: 700;
   display: inline-block;
   text-transform: uppercase;
-
   letter-spacing: 1px;
-
   transition: color 0.3s ease-in-out;
-
 }
 
 .newcarLbl:hover {
   color: #0e50ca;
-
 }
 
 .input {
@@ -113,10 +102,6 @@
 .input:focus {
   outline: none;
   box-shadow: 3px 3px 100px #008cff;
-}
-
-.input:focus {
-  outline: none;
   border: 1px solid #008cff;
 }
 
@@ -129,7 +114,7 @@
 .errors {
   color: #d30202;
   margin-top: 0;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 .maxWidthWrapper {
@@ -160,13 +145,12 @@
   position: relative;
   text-transform: uppercase;
   margin: 0;
-  border-radius: 0;
   height: 3rem;
   border-radius: 10px;
 }
 
-.btn:hover{ 
-  color :#fff
+.btn:hover {
+  color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -188,5 +172,41 @@
   }
 }
 
+@media (max-width: 576px) {
 
+  .col1,
+  .col2 {
+    width: 100%;
+    flex: 0 0 100%;
+  }
 
+  .contentWrapper {
+    flex-direction: column;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+  }
+}
