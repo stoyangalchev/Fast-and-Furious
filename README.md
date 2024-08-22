@@ -6,7 +6,7 @@
 
 ![App Screenshot](./screenshots/Home%20Page(User).png)
 
-# Deployment 🌍 -> "https://fast-and-furious-sigma.vercel.app"  
+# Deployment 🌍 -> https://fast-and-furious-sigma.vercel.app  
 - ** Client deployed to Vercel
 - ** Server deployed to MongoDB Atlas and Render
 ## 🚀 Features
