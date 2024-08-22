@@ -8,7 +8,8 @@
 
 # Deployment 🌍 -> https://fast-and-furious-sigma.vercel.app  
 - ** Client deployed to Vercel
-- ** Server deployed to MongoDB Atlas and Render
+- ** Server deployed to Render
+- ** Data base used MongoDB Atlas 
 ## 🚀 Features
 
 - **User Authentication**: Seamlessly register and log in to access all features.
