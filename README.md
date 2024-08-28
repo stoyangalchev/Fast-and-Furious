@@ -1,6 +1,6 @@
 # Fast and Furious 🚗💨
 
-**Fast and Furious** is a sleek web application built with React and Vite. It's designed for car enthusiasts who want to explore, contribute, and engage with a vibrant community of vehicle lovers. From adding your favorite rides to commenting and liking, this app brings your automotive passions to life!
+**Fast and Furious** is a sleek web application built with React and Vite. It's designed for car enthusiasts who want to explore, contribute, and engage with a vibrant community of vehicle lovers. From adding your favorite vehicle to commenting and liking, this app brings your automotive passions to life!
 
 ## 📸 Screenshots
 
