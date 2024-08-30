@@ -83,3 +83,5 @@ We welcome contributions from the community! If you have ideas for enhancements 
 ## 📜 License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute as you see fit.
+
+## ⏰ !!! You have to wait until the server returns a response, we apologize for the inconvenience, the reason for the delay comes from the free test plan of the Mongo DB Atlas cluster.
