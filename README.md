@@ -7,7 +7,7 @@
 ![App Screenshot](./screenshots/Home%20Page(User).png)
 
 # Deployment 🌍 -> [Click this link](https://fast-and-furious-sigma.vercel.app).
-https://fast-and-furious-sigma.vercel.app  
+
 - ** Client deployed to Vercel
 - ** Server deployed to Render
 - ** Data base used MongoDB Atlas 
