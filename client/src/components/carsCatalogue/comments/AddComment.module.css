@@ -1,3 +1,11 @@
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Default styles */
 .container {
   padding-right: 3rem;
   padding-left: 3rem;
@@ -6,6 +14,7 @@
   margin-left: auto;
   padding-top: 90px;
   padding-bottom: 90px;
+  background-color: #000c1a;
 }
 
 .contentWrapper {
@@ -28,7 +37,7 @@
   line-height: 1.2;
   margin-top: 0;
   font-family: "Roboto", sans-serif;
-  color: #040f28;
+  color: #383f4e;
 }
 
 .highlight {
@@ -38,18 +47,22 @@
 .paragraph {
   margin-bottom: 3rem;
   margin-top: 1rem;
+  margin-left: 20%;
   font-size: 30px;
+  color: #5c6069;
 }
 
 .col2Wrapper {
   background-color: rgba(1, 22, 43, 1.5);
   text-align: center;
   padding: 3rem;
+  border-radius: 10px;
 }
 
 .form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .newcarLbl {
@@ -61,7 +74,6 @@
 }
 
 .inputAuthor {
-
   width: 100%;
   color: #080000;
   background-color: #30d403;
@@ -71,32 +83,27 @@
   text-align: center;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
-  position: relative;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: px;
-  border-radius: 50px;
-  height: 2rem;
+  border-radius: 10px;
+  height: 2.5rem;
   font-size: 20px;
   font-weight: 700;
 }
 
 .input {
-  border: 0;
+  border: 1px solid #008cff;
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
   color: #000000;
-  background-color: #fff;
-  background-clip: padding-box;
-  appearance: none;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   height: 55px;
   margin: 0;
   font-family: inherit;
@@ -109,53 +116,45 @@
 
 .input:focus {
   outline: none;
-  border: 1px solid #008cff;
+  border-color: #008cff;
+  box-shadow: 0 0 5px rgba(0, 140, 255, 0.5);
 }
 
 .errors {
   color: #ff0000;
   margin-top: 0;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 .maxWidthWrapper {
   flex: 0 0 auto;
   width: 100%;
-
 }
 
 .btn {
   cursor: pointer;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 1.5rem;
   width: 100%;
   color: #000;
   background-color: #008cff;
   border-color: #008cff;
   display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  position: relative;
-  text-transform: uppercase;
-
-  border-radius: 0;
-  height: 3rem;
-  font-size: 20px;
   font-weight: 700;
-
+  text-align: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  height: 3rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
+  background-color: #006bbf;
   color: #ffffff;
 }
+
+/* Responsive styles */
+
 /* For screens larger than 1200px */
 @media (max-width: 1200px) {
   .container {
@@ -259,28 +258,6 @@
     font-size: 10px;
   }
 }
-
-/* For screens larger than 200px */
-@media (max-width: 200px) {
-  .container {
-    padding-right: 0.1rem;
-    padding-left: 0.1rem;
-  }
-
-  .heading {
-    font-size: 1.2rem;
-  }
-
-  .paragraph {
-    font-size: 14px;
-  }
-
-  .btn {
-    font-size: 8px;
-  }
-}
-
-/* Additional responsive styles for better UX */
 
 /* For landscape orientation */
 @media (orientation: landscape) {
