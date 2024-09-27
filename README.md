@@ -21,10 +21,10 @@
 - **Responsive design** : Try it with all devices.
   
 
-## To log in and test the app, use the following credentials:
+## To log in and test the app, Register to app:
 
-- **Username**: `sto`
-- **Password**: `sto`
+- **Username**: `e.g. johndoe`
+- **Password**: `e.g. *password*`
   
 ## 🛠️ Technologies Used
 
