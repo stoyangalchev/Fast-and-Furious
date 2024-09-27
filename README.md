@@ -19,7 +19,13 @@
 - **Vehicle Details**: Get detailed insights into each vehicle's specs and features.
 - **Newsletter Sign-Up**: Stay updated with the latest news by subscribing to our newsletter.
 - **Responsive design** : Try it with all devices.
+  
 
+To log in and test the app, use the following credentials:
+
+- **Username**: `sto`
+- **Password**: `sto`
+  
 ## 🛠️ Technologies Used
 
 - **Frontend**:
